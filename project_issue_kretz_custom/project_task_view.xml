@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="project_task_form_view">
+            <field name="name">Project Task Kretz Mods</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">   
+                <page string="Extra Info" position="after">
+                    <page string="Issues">
+                        <field name="project_issue_ids"/>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

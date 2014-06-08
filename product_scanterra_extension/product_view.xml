@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    <!-- Product views -->
+        <record id="product_search_form_view" model="ir.ui.view">
+            <field name="name">product.search.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view"/>
+            <field name="arch" type="xml">
+                <field name="categ_id" position="after">
+                    <field name="type_id"/>
+                    <field name="segment_id"/>
+                </field>
+                <filter string="Category" position="after">
+                    <filter string="Type" icon="terp-stock_symbol-selection" domain="[]" context="{'group_by' : 'type_id'}"/>
+                    <filter string="Segment" icon="terp-stock_symbol-selection" domain="[]" context="{'group_by' : 'segment_id'}"/>
+                </filter>    
+            </field>
+        </record>
+
+        <record id="product_normal_form_view" model="ir.ui.view">
+            <field name="name">product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <h2 position="after">
+                    <label for="type_id" class="oe_edit_only"/>
+                    <h3><field name="type_id"/></h3>
+                    <label for="segment_id" class="oe_edit_only"/>
+                    <h3><field name="segment_id"/></h3>
+                </h2>
+            </field>
+        </record>
+
+    <!-- Type  -->
+        <record id="product_type_search_view" model="ir.ui.view">
+            <field name="name">product.type.search</field>
+            <field name="model">product.type</field>
+            <field name="arch" type="xml">
+                <search string="Product Types">
+                    <field name="name" string="Product Types"/>
+                    <field name="parent_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="product_type_form_view" model="ir.ui.view">
+            <field name="name">product.type.form</field>
+            <field name="model">product.type</field>
+            <field name="arch" type="xml">
+                <form string="Product Types" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="parent" col="4">
+                                <field name="parent_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_type_list_view" model="ir.ui.view">
+            <field name="name">product.type.list</field>
+            <field name="model">product.type</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Product Types">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_type_tree_view" model="ir.ui.view">
+            <field name="name">product.type.tree</field>
+            <field name="model">product.type</field>
+            <field name="field_parent">child_id</field>
+            <field name="arch" type="xml">
+                <tree toolbar="True" string="Product Types">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+<!--         <record id="product_by_communication_type_action" model="ir.actions.act_window">
+            <field name="name">Products by Types</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.type</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+            <field name="view_type">tree</field>
+            <field name="view_id" ref="product_type_tree_view"/>
+            <field name="help" type="html">
+              <p>
+                Here is a list of all your products classified by Type.
+                You can click a type to get the list of all products linked to
+                this type or to a child of this type.
+              </p>
+            </field>
+        </record>
+        <menuitem
+            action="product_by_communication_type_action"
+            id="product_type_menu"
+            parent="base.menu_product"
+            sequence="40" groups="base.group_no_one"/> -->
+        <record id="type_action" model="ir.actions.act_window">
+            <field name="name">Product Types</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.type</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="product_type_search_view"/>
+            <field name="view_id" ref="product_type_list_view"/>
+        </record>
+        <menuitem action="type_action"
+            groups="base.group_no_one"
+            id="type_menu"
+            parent="product.prod_config_main" sequence="10"/>
+    
+    <!-- Segment Views-->
+        <record id="product_segment_search_view" model="ir.ui.view">
+            <field name="name">product.segment.search</field>
+            <field name="model">product.segment</field>
+            <field name="arch" type="xml">
+                <search string="Product Segments">
+                    <field name="name" string="Product Segments"/>
+                    <field name="parent_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="product_segment_form_view" model="ir.ui.view">
+            <field name="name">product.segment.form</field>
+            <field name="model">product.segment</field>
+            <field name="arch" type="xml">
+                <form string="Product Segments" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="parent" col="4">
+                                <field name="parent_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_segment_list_view" model="ir.ui.view">
+            <field name="name">product.segment.list</field>
+            <field name="model">product.segment</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="Product Segments">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_segment_tree_view" model="ir.ui.view">
+            <field name="name">product.segment.tree</field>
+            <field name="model">product.segment</field>
+            <field name="field_parent">child_id</field>
+            <field name="arch" type="xml">
+                <tree toolbar="True" string="Product Segments">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+<!--         <record id="product_by_segment_action" model="ir.actions.act_window">
+            <field name="name">Products by Segments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.segment</field>
+            <field name="domain">[('parent_id','=',False)]</field>
+            <field name="view_type">tree</field>
+            <field name="view_id" ref="product_segment_tree_view"/>
+            <field name="help" type="html">
+              <p>
+                Here is a list of all your products classified by communication segment.
+                You can click a segment to get the list of all products linked to
+                this segment or to a child of this segment.
+              </p>
+            </field>
+        </record>
+        <menuitem
+            action="product_by_segment_action"
+            id="product_segment_menu"
+            parent="base.menu_product"
+            sequence="40" groups="base.group_no_one"/> -->
+        <record id="segment_action" model="ir.actions.act_window">
+            <field name="name">Product Segments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.segment</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="product_segment_search_view"/>
+            <field name="view_id" ref="product_segment_list_view"/>
+        </record>
+        <menuitem action="segment_action"
+            groups="base.group_no_one"
+            id="segment_menu"
+            parent="product.prod_config_main" sequence="20"/>
+
+
+    </data>
+</openerp>
