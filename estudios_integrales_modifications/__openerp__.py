@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Sistemas ADHOC - ADHOC SA
-#    https://launchpad.net/~sistemas-adhoc
+#    Ingenieria ADHOC - ADHOC SA
+#    https://launchpad.net/~ingenieria-adhoc
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -29,11 +29,11 @@
 Estudios Integrales Customizations
 ==================================
 Modifications for Estudios Integrales
-* Modificaciones en permisos relativos a multicompania
-* Agregado control a document.directory a employees para que puedan borrar adjuntos
+* Modification permits for Multicompany
+* Added document.directory control to employees so they can delete attachments
     """,
-    'author':  'Sistemas ADHOC',
-    'website': 'www.sistemasadhoc.com.ar',
+    'author':  'Ingenieria ADHOC',
+    'website': 'www.ingadhoc.com.ar',
     'images': [
     ],
     'depends': [
