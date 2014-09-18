@@ -30,6 +30,34 @@
         <field name="groups_id" eval="[(6,0,[ref('base.group_sale_manager')])]"/>
     </record>
 
+    <!-- Lead Multicompany  -->
+    <record model="ir.rule" id="lead_multic">
+        <field name="name">Lead multi-company</field>
+        <field name="model_id" ref="crm.model_crm_lead"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+    <!-- Phonecall Multicompany  -->
+    <record model="ir.rule" id="phonecall_multic">
+        <field name="name">Phonecall multi-company</field>
+        <field name="model_id" ref="crm.model_crm_phonecall"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+    <!-- Opportunity Report Multicompany  -->
+    <record model="ir.rule" id="opportunity_report_multic">
+        <field name="name">Opportunity Report multi-company</field>
+        <field name="model_id" ref="crm.model_crm_opportunity_report"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+    <!-- Lead Report Multicompany  -->
+    <record model="ir.rule" id="lead_report_multic">
+        <field name="name">Lead Report multi-company</field>
+        <field name="model_id" ref="crm.model_crm_lead_report"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
 
 </data>
 </openerp>
