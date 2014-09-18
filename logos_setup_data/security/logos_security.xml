@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+
+    <!-- Mostramos product product para que se vean los precios -->
+    <record model="ir.ui.menu" id="product.menu_products">
+        <field name="groups_id" eval="[(6,0,[])]"/>
+    </record>
+
+    <!-- Mostramos product product para que se vean los precios -->
+    <record model="ir.ui.menu" id="product.menu_product_template_action">
+        <field name="groups_id" eval="[(6,0,[ref('base.group_no_one')])]"/>
+    </record>
+
+    <!-- Mostramos product product para que se vean los precios -->
+    <record model="res.groups" id="base.group_user">
+        <field name="implied_ids" eval="[(4,ref('sale.group_delivery_invoice_address')),(4,ref('product.group_purchase_pricelist')),(4,ref('product.group_sale_pricelist')),(4,ref('sale.group_discount_per_so_line'))]"/>
+    </record>
+
+    <!-- A los usuarios see all leads le mostramos algunos informes -->
+    <record model="ir.ui.menu" id="crm.menu_report_crm_leads_tree">
+        <field name="groups_id" eval="[(4,ref('base.group_sale_salesman_all_leads'))]"/>
+    </record>
+    <record model="ir.ui.menu" id="base.next_id_64">
+        <field name="groups_id" eval="[(4,ref('base.group_sale_salesman_all_leads'))]"/>
+    </record>
+
+    <!-- Que el menu sales team lo vea solo el manager  -->
+    <record model="ir.ui.menu" id="sales_team.menu_sales_team_act">
+        <field name="groups_id" eval="[(6,0,[ref('base.group_sale_manager')])]"/>
+    </record>
+
+
+</data>
+</openerp>
