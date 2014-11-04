@@ -14,18 +14,16 @@ Logos Set Up Data
     'images': [
     ],
     'depends': [
-        # Dependencias fuertes (se necesitan por los datos que tocamos)
-        # 'purchase',
-        # 'crm',
-        # Dependencias del proyecto
         'crm',
         'purchase',
         'sale',
+        'website_sale',
     ],
     'data': [
         # Para arreglar error
         'security/ir.model.access.csv',
         'security/logos_security.xml',
+        'product_view.xml',
     ],
     'demo': [
     ],

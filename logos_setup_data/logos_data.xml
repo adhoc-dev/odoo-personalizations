@@ -3,14 +3,14 @@
 <data noupdate="1">
 
     <!-- Mostramos product product para que se vean los precios -->
-    <record model="ir.ui.menu" id="product.menu_products">
+<!--     <record model="ir.ui.menu" id="product.menu_products">
         <field name="groups_id" eval="[(6,0,[])]"/>
-    </record>
+    </record> -->
 
-    <!-- Mostramos product product para que se vean los precios -->
-    <record model="ir.ui.menu" id="product.menu_product_template_action">
+    <!-- Ocultamos product template para que se vean los precios -->
+<!--     <record model="ir.ui.menu" id="product.menu_product_template_action">
         <field name="groups_id" eval="[(6,0,[ref('base.group_no_one')])]"/>
-    </record>
+    </record> -->
 
     <!-- Agregamos algunos grupos a todos los empleados (listas de precios y direcciones en ordenes de venta) -->
     <record model="res.groups" id="base.group_user">

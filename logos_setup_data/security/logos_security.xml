@@ -2,17 +2,8 @@
 <openerp>
 <data noupdate="1">
 
-    <!-- Mostramos product product para que se vean los precios -->
-    <record model="ir.ui.menu" id="product.menu_products">
-        <field name="groups_id" eval="[(6,0,[])]"/>
-    </record>
 
-    <!-- Mostramos product product para que se vean los precios -->
-    <record model="ir.ui.menu" id="product.menu_product_template_action">
-        <field name="groups_id" eval="[(6,0,[ref('base.group_no_one')])]"/>
-    </record>
-
-    <!-- Mostramos product product para que se vean los precios -->
+    <!-- Configuraciones de listas de precios y demas -->
     <record model="res.groups" id="base.group_user">
         <field name="implied_ids" eval="[(4,ref('sale.group_delivery_invoice_address')),(4,ref('product.group_purchase_pricelist')),(4,ref('product.group_sale_pricelist')),(4,ref('sale.group_discount_per_so_line'))]"/>
     </record>
