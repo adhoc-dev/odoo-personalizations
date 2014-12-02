@@ -9,6 +9,8 @@
 Scanterra Modifications
 =======================
 * Restringir que las tareas creadas por un usuario, no las pueda eliminar otro usuario. Es decir que cada usuario solo pueda eliminar las tareas creadas por si mismo.
+* Que se registre automáticamente como  una nota cuando se cambia alguna de los siguientes campos de la tarea (Resumen de la tarea (titulo), fecha limite, horas iniciales planificadas, fecha de inicio y fecha final) (actualmente solo registra en forma automática los cambios de estado).
+
     """,
     'author':  'Ingenieria ADHOC',
     'website': 'www.ingadhoc.com',
