@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-<data noupdate="1">
+<data noupdate="0">
+<!-- <data noupdate="1"> -->
 
     <!-- Mostramos product product para que se vean los precios -->
 <!--     <record model="ir.ui.menu" id="product.menu_products">

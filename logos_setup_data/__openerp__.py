@@ -17,6 +17,7 @@ Logos Set Up Data
         'crm',
         'purchase',
         'sale',
+        'portal_sale_distributor',
         'website_sale',
     ],
     'data': [
