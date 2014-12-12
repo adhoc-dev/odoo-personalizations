@@ -1,0 +1,324 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* logos_invoice_analysis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-12 20:46+0000\n"
+"PO-Revision-Date: 2014-12-12 20:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: logos_invoice_analysis
+#: model:ir.actions.act_window,name:logos_invoice_analysis.action_account_invoice_line_report_logos_all
+#: model:ir.ui.menu,name:logos_invoice_analysis.menu_action_account_invoice_line_report_logos_all
+msgid "Analisis de Factura de Logos"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: help:account.invoice.line.report_logos,ean13:0
+msgid "Barcode"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,state:0
+msgid "Cancelled"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,product_category_id:0
+msgid "Category"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: help:account.invoice.line.report_logos,customer:0
+msgid "Check this box if this contact is a customer."
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: help:account.invoice.line.report_logos,supplier:0
+msgid "Check this box if this contact is a supplier. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,city:0
+msgid "City"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,collection_id:0
+msgid "Collection"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,country_id:0
+msgid "Country"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,customer:0
+msgid "Customer"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,type:0
+msgid "Customer Invoice"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,type:0
+msgid "Customer Refund"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,date_invoice:0
+msgid "Date Invoice"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,date_invoice_from:0
+msgid "Date Invoice from"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,date_invoice_to:0
+msgid "Date Invoice to"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,discount:0
+msgid "Discount (%)"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,discount_amount:0
+msgid "Discount Amount"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,state:0
+msgid "Done"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: selection:account.invoice.line.report_logos,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Draft Invoices"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,date_due:0
+msgid "Due Date"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,ean13:0
+msgid "EAN13"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,editorial_id:0
+msgid "Editorial"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,state_id:0
+msgid "Fed. State"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,price_gross_subtotal:0
+msgid "Gross Subtotal"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Group By..."
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,id:0
+msgid "ID"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,isbn:0
+msgid "ISBN"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,state:0
+msgid "Invoice State"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,amount_total:0
+msgid "Invoice Total"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Invoiced"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_graph
+msgid "Invoices Analysis"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_tree
+msgid "Invoices Line Logos Analysis"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,journal_id:0
+msgid "Journal"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Journal Type"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: model:ir.model,name:logos_invoice_analysis.model_account_invoice_line_report_logos
+msgid "Logos Invoices Statistics"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,number:0
+msgid "Number"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,state:0
+msgid "Open"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Open and Paid Invoices"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,state:0
+msgid "Pro-forma"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,product_id:0
+msgid "Product"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Product Category"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,name_template:0
+msgid "Product by text"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Purchase Invoice"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Purchase Refund"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,quantity:0
+msgid "Quantity"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Sale Invoice"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "Sale Refund"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+#: field:account.invoice.line.report_logos,user_id:0
+msgid "Salesman"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_search
+msgid "State"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,price_subtotal:0
+msgid "Subtotal"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,supplier:0
+msgid "Supplier"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,type:0
+msgid "Supplier Invoice"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: selection:account.invoice.line.report_logos,type:0
+msgid "Supplier Refund"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: view:account.invoice.line.report_logos:logos_invoice_analysis.view_account_invoice_line_report_logos_tree
+msgid "Total"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,type:0
+msgid "Type"
+msgstr ""
+
+#. module: logos_invoice_analysis
+#: field:account.invoice.line.report_logos,price_unit:0
+msgid "Unit Price"
+msgstr ""
+

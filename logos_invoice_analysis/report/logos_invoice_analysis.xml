@@ -25,9 +25,6 @@
                 <field name="state_id" invisible="1"/>
                 <field name="country_id" invisible="1"/>
                 <field name="user_id" invisible="0"/>
-                <field name="year" invisible="1"/>
-                <field name="month" invisible="1"/>
-                <field name="week" invisible="1"/>
                 <field name="editorial_id" invisible="1"/>
                 <field name="collection_id" invisible="1"/>
                 <field name="company_id" invisible="1"/>

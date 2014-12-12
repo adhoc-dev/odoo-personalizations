@@ -32,12 +32,6 @@ class account_invoice_line_report_logos(osv.osv):
         'date_invoice': fields.date('Date Invoice', readonly=True),
         'date_invoice_from': fields.function(lambda *a, **k: {}, method=True, type='date', string="Date Invoice from"),
         'date_invoice_to': fields.function(lambda *a, **k: {}, method=True, type='date', string="Date Invoice to"),
-        'year': fields.char('Year', size=4, readonly=True),
-        'week': fields.char('Week', size=2, readonly=True),
-        'month': fields.selection([('01', 'January'), ('02', 'February'), ('03', 'March'), ('04', 'April'),
-                                   ('05', 'May'), ('06', 'June'), ('07',
-                                                                   'July'), ('08', 'August'), ('09', 'September'),
-                                   ('10', 'October'), ('11', 'November'), ('12', 'December')], 'Month', readonly=True),
         'amount_total': fields.float('Invoice Total', readonly=True, group_operator="sum"),
         # Ahora llevamos de product.product
         'ean13': fields.char('EAN13', size=13, help='Barcode', readonly=True),
@@ -124,9 +118,6 @@ SELECT
 
   "account_invoice"."state" AS "state",
   "account_invoice"."date_invoice" AS "date_invoice",
-  to_char("date_invoice", 'YYYY') as year,
-  to_char("date_invoice", 'WW') as week,
-  to_char("date_invoice", 'MM') as month,
 
   "account_invoice"."amount_total" AS "amount_total",
   
