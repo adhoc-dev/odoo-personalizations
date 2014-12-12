@@ -21,9 +21,9 @@
                 <field name="price_subtotal" sum="Total"/>
                 <field name="date_due" invisible="1"/>
                 <field name="state"/>
-               <field name="city" invisible="1"/>
-               <field name="state_id" invisible="1"/>
-               <field name="country_id" invisible="1"/>
+                <field name="city" invisible="1"/>
+                <field name="state_id" invisible="1"/>
+                <field name="country_id" invisible="1"/>
                 <field name="user_id" invisible="0"/>
                 <field name="year" invisible="1"/>
                 <field name="month" invisible="1"/>
@@ -40,9 +40,11 @@
         <field name="name">account.invoice.line.report.logos.graph</field>
         <field name="model">account.invoice.line.report_logos</field>
          <field name="arch" type="xml">
-             <graph string="Invoices Analysis" type="bar">
-                 <field name="month"/>
-                 <field name="price_subtotal"/>
+             <graph string="Invoices Analysis" type="pivot" stacked="True">
+             <!-- <graph string="Invoices Analysis" type="bar"> -->
+                 <!-- <field name="month" type="row"/> -->
+                 <!-- <field name="month" type="col"/> -->
+                 <!-- <field name="price_subtotal"/> -->
              </graph>
          </field>
     </record>
@@ -54,62 +56,54 @@
         <field name="arch" type="xml">
             <search string="Invoices Line Logos Analysis">
               <group>
+                    <filter string="Sale Invoice"
+                            domain="[('type','=','out_invoice')]"/>
+                    <filter string="Sale Refund"
+                            domain="[('type','=','out_refund')]"/>
+                    <filter string="Purchase Invoice"
+                            domain="[('type','=','in_invoice')]"/>
+                    <filter string="Purchase Refund"
+                            domain="[('type','=','in_refund')]"/>
+                    <separator/>
+                    <field name="name_template"/>
                     <filter string="Draft"
-                           icon="terp-document-new"
                            domain="[('state','in',['draft','proforma','proforma2'])]"
                            help="Draft Invoices"/>
                     <filter string="Invoiced"
                            name="current"
-                           icon="terp-check"
                            domain="[('state','not in', ('draft','cancel'))]"
                            help="Open and Paid Invoices"/>
-                    <filter icon="terp-dolar" string="Sale Invoice"
-                            domain="[('type','=','out_invoice')]"/>
-                    <filter icon="terp-dolar_ok!"
-                            string="Sale Refund"
-                            domain="[('type','=','out_refund')]"/>
-                    <filter icon="terp-dolar" string="Purchase Invoice"
-                            domain="[('type','=','in_invoice')]"/>
-                    <filter icon="terp-dolar_ok!"
-                            string="Purchase Refund"
-                            domain="[('type','=','in_refund')]"/>
                     <field name="date_invoice_from" filter_domain="[('date_invoice','&gt;=',self)]"/>
                     <field name="date_invoice_to" filter_domain="[('date_invoice','&lt;=',self)]"/>
-                    <field name="partner_id"/>
-                    <field name="product_id"/>     
-                    <field name="name_template" />
-                    <field name="user_id" />
-                    <field name="collection_id" />
-                    <field name="editorial_id" />
-                    <field name="product_category_id" filter_domain="[('product_category_id', 'child_of', self)]"/>
                     <field name="city"/>
                     <field name="state_id"/>
                     <field name="country_id" />
                     <field name="company_id"/>
-                    <field name="partner_category_ids"/>
+                    <field name="product_id"/>
+                    <field name="user_id" />
+                    <field name="collection_id"/>
+                    <field name="editorial_id"/>
+                    <field name="product_category_id" filter_domain="[('product_category_id', 'child_of', self)]"/>
+                    <field name="partner_id"/>
+                    <!-- <field name="partner_category_ids"/> -->
                 </group>
                 <group expand="1" string="Group By...">
-                    <filter string="Partner" name="partner" icon="terp-partner" context="{'group_by':'partner_id'}"/>
-                    <filter string="Salesman" name='user' icon="terp-personal" context="{'group_by':'user_id'}"/>
-                    <separator orientation="vertical"/>
-                    <filter string="Product" icon="terp-accessories-archiver" context="{'group_by':'product_id'}"/>
-                    <filter string="Product Category" name="category_product" icon="terp-stock_symbol-selection" context="{'group_by':'product_category_id'}"/>
+                    <filter string="Partner" name="partner" context="{'group_by':'partner_id'}"/>
+                    <filter string="Salesman" name='user' context="{'group_by':'user_id'}"/>
+                    <filter string="Product" context="{'group_by':'product_id'}"/>
+                    <filter string="Product Category" name="category_product" context="{'group_by':'product_category_id'}"/>
                     <filter string="Editorial" context="{'group_by':'editorial_id'}"/>
                     <filter string="Collection" context="{'group_by':'collection_id'}"/>
-                    <separator orientation="vertical"/>
                     <filter string="State" icon="terp-stock_effects-object-colorize" context="{'group_by':'state'}"/>
                     <filter string="Journal Type" icon="terp-stock_symbol-selection" context="{'group_by':'type'}"/>
-                    <separator orientation="vertical"/>
                     <filter string="Journal" icon="terp-folder-orange" context="{'group_by':'journal_id'}"/>
-                    <separator orientation="vertical" groups="base.group_multi_company"/>
                     <filter string="Company" icon="terp-go-home" context="{'group_by':'company_id'}"/>
                     <filter string="City" icon="" context="{'group_by':'city'}"/>
                     <filter string="State" icon="" context="{'group_by':'state_id'}"/>
                     <filter string="Country" icon="" context="{'group_by':'country_id'}"/>
-                    <separator orientation="vertical"/>
-                    <filter string="Week" name="week" icon="terp-go-month" context="{'group_by':'week'}" help="Group by week of Invoice Date"/>
-                    <filter string="Month" name="month" icon="terp-go-month" context="{'group_by':'month'}" help="Group by month of Invoice Date"/>
-                    <filter string="Year" name="year" icon="terp-go-year" context="{'group_by':'year'}" help="Group by year of Invoice Date"/>
+                    <!-- <filter string="Week" name="week" icon="terp-go-month" context="{'group_by':'week'}" help="Group by week of Invoice Date"/> -->
+                    <!-- <filter string="Month" name="month" icon="terp-go-month" context="{'group_by':'month'}" help="Group by month of Invoice Date"/> -->
+                    <!-- <filter string="Year" name="year" icon="terp-go-year" context="{'group_by':'year'}" help="Group by year of Invoice Date"/> -->
                 </group> 
             </search>
         </field>
@@ -120,18 +114,11 @@
         <field name="name">Analisis de Factura de Logos</field>
         <field name="res_model">account.invoice.line.report_logos</field>
         <field name="view_type">form</field>
-        <field name="view_mode">graph</field>
-        <!-- <field name="view_mode">tree,graph</field> -->
-        <!-- <field name="view_id" ref="view_account_invoice_line_report_logos_tree"/> -->
+        <field name="view_mode">graph,tree</field>
         <field name="context">{}</field>
-<!--                <field name="context">{'search_default_period':1,'search_default_current':1, 'search_default_year': 1, 'search_default_category_product':1, 'search_default_customer':1, 'search_default_date': time.strftime('%Y-01-01'), 'group_by':[], 'group_by_no_leaf':1,}</field>-->
-        <!-- <field name="search_view_id" ref="view_account_invoice_line_report_logos_search"/> -->
-        <!-- <field name="help"></field> -->
-
     </record>
 
     <menuitem action="action_account_invoice_line_report_logos_all" id="menu_action_account_invoice_line_report_logos_all" parent="account.menu_finance_reporting" sequence="0"/>
-
 
 </data>
 </openerp>

@@ -43,18 +43,12 @@ class account_invoice_line_report_logos(osv.osv):
         'ean13': fields.char('EAN13', size=13, help='Barcode', readonly=True),
         'product_id': fields.many2one('product.product', 'Product', readonly=True),
         'name_template': fields.char(string="Product by text", size=128, readonly=True),
-        # 'active': fields.boolean('Active', help="If the active field is set to False, it will allow you to hide the product without removing it.", readonly=True),
         'isbn': fields.char(string=u'ISBN', size=64, readonly=True),
         # 'type_of_product': fields.selection((('b', 'Libro'), ('d', 'DVD')), u'Tipo de producto', readonly=True),
         # Ahora llevamos de res.partner
         'partner_id': fields.many2one('res.partner', 'Partner', readonly=True),
-        # 'res_partner_name': fields.char('Partner', size=128, readonly=True),
         'customer': fields.boolean('Customer', help="Check this box if this contact is a customer.", readonly=True),
         'supplier': fields.boolean('Supplier', help="Check this box if this contact is a supplier. If it's not checked, purchase people will not see it when encoding a purchase order.", readonly=True),
-        # de Res partner category
-        # por ahora no la llevamos porque debería ser un campo many2many
-        # 'partner_category_id': fields.many2one('res.partner.category', 'Category', readonly=True),
-        # 'res_partner_category_name': fields.char('Partner Category',size=128, readonly=True),
         # Account journal
         'journal_id': fields.many2one('account.journal', 'Journal', readonly=True),
         # 'account_journal_name': fields.char('Journal', size=64, readonly=True),
@@ -64,36 +58,23 @@ class account_invoice_line_report_logos(osv.osv):
             ('out_refund', 'Customer Refund'),
             ('in_refund', 'Supplier Refund'),
         ], 'Type', readonly=True),
-        # usamos ahora account_type        'account_journal_type': fields.selection([('sale', 'Sale'),('sale_refund','Sale Refund'), ('purchase', 'Purchase'), ('purchase_refund','Purchase Refund'), ('cash', 'Cash'), ('bank', 'Bank and Checks'), ('general', 'General'), ('situation', 'Opening/Closing Situation')], 'Journal Type', size=32, readonly=True,),
-        # ahora de res_user
         'user_id': fields.many2one('res.users', 'Salesman', readonly=True),
-        # 'res_users_name': fields.char('User', size=128, readonly=True),
-        # ahora de res company
         'company_id': fields.many2one('res.company', 'Company', readonly=True),
-        # 'res_company_name': fields.char(string='Company', size=128, readonly=True),
-        # de product_editorial
         'editorial_id': fields.many2one('product.attribute.value', 'Editorial', domain=[('attribute_id.name', '=', 'Editorial')], readonly=True),
-        # 'product_editorial_name': fields.char(u'Editorial', size=64, readonly=True),
-        # de product collection
         'collection_id': fields.many2one('product.attribute.value', 'Collection', domain=[('attribute_id.name', '=', 'Colección')], readonly=True),
-        # 'product_collection_name': fields.char(u'Collection', size=64, readonly=True),
         # de res country state
         'country_id': fields.many2one('res.country', 'Country', readonly=True),
         'state_id': fields.many2one('res.country.state', 'Fed. State', readonly=True),
-        # 'res_country_state_name': fields.char('State', size=64, readonly=True,
-        # help='Administrative divisions of a country. E.g. Fed. State,
-        # Departement, Canton'),
         'city': fields.char('City', size=64, readonly=True),
         # de product category
         'product_category_id': fields.many2one('product.category', 'Category', readonly=True),
-        'partner_category_ids': fields.related(
-            'partner_id',
-            'category_id',
-            type="many2one",
-            relation="res.partner.category",
-            string="Partner Category",
-            store=False),
-        # 'product_category_name': fields.char('Name', size=64, readonly=True),
+        # 'partner_category_ids': fields.related(
+        #     'partner_id',
+        #     'category_id',
+        #     type="many2one",
+        #     relation="res.partner.category",
+        #     string="Partner Category",
+        #     store=False),
     }
 
     _order = 'id'
