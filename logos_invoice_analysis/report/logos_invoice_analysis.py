@@ -18,6 +18,7 @@ class account_invoice_line_report_logos(osv.osv):
         'price_gross_subtotal': fields.float('Gross Subtotal', readonly=True, group_operator="sum"),
         'discount_amount': fields.float('Discount Amount', readonly=True, group_operator="sum"),
         # Estos son campos de account inovice
+        'period_id': fields.many2one('account.period', 'Period', readonly=True),
         'date_due': fields.date('Due Date', readonly=True),
         'number': fields.char(string='Number', size=128, readonly=True),
         #        Para otras empresas seria util agregar campos de tax
@@ -113,7 +114,7 @@ SELECT
   "account_invoice"."number" AS "number",
   "account_invoice"."journal_id" AS "journal_id",--n
   "account_invoice"."user_id" AS "user_id",--n
- "account_invoice"."company_id" AS "company_id",--n
+  "account_invoice"."company_id" AS "company_id",--n
   "account_invoice"."type" AS "type",
 
   "account_invoice"."state" AS "state",
@@ -123,7 +124,6 @@ SELECT
   
   "product_product"."ean13" AS "ean13",
   "product_product"."name_template" AS "name_template",
- -- "product_product"."active" AS "active",
   "product_template"."isbn" AS "isbn",
 
   "product_template"."editorial_id" AS "editorial_id", --n
@@ -132,82 +132,18 @@ SELECT
   "product_template"."categ_id" as "product_category_id", --n
   
   "res_partner"."customer" AS "customer",
-  --"res_partner"."name" AS "res_partner_name",
   "res_partner"."supplier" AS "supplier",
-
   "res_partner"."state_id" as "state_id", --n
   "res_partner"."country_id" as "country_id", --n
-     
-  --"res_partner_category"."name" AS "res_partner_category_name",
-  
- -- "account_journal"."name" AS "account_journal_name",
- -- "account_journal"."type" AS "account_journal_type",
-
-  --"res_users"."name" AS "res_users_name",
-
- -- "res_company"."name" AS "res_company_name",
-
-  --"product_editorial"."name" AS "product_editorial_name",
-  --"product_collection"."name" AS "product_collection_name",
- 
-
-  
-  --"res_country_state"."name" AS "res_country_state_name",
- "res_partner"."city" AS "city"
- 
-  --"product_category"."name" AS "product_category_name"
-  
-  --"account_invoice_line"."company_id" AS "company_id",
-  --"account_invoice"."origin" AS "account_invoice_origin",
-  --"account_invoice"."comment" AS "comment",
-  --"account_invoice"."reference" AS "reference",
-  --"account_invoice"."payment_term" AS "payment_term",
-  --"account_invoice"."fiscal_position" AS "fiscal_position",
-  --"account_invoice"."user_id" AS "user_id",
-  --"account_invoice"."company_id" AS "account_invoice_company_id",
-  --"account_invoice"."move_name" AS "move_name",
-  --"account_invoice"."period_id" AS "account_invoice_period_id",
-  --"account_invoice"."move_id" AS "move_id",
-  --"account_invoice"."name" AS "account_invoice_name",
-  --"product_product"."id" AS "product_product_id",
-  --"product_product"."default_code" AS "default_code",
-  --"product_product"."variants" AS "variants",
-  --"product_product"."product_tmpl_id" AS "product_tmpl_id",
-  --"product_product"."book_collection_number" AS "book_collection_number",
-  --"product_product"."book_edition_year" AS "book_edition_year",
-  --"product_product"."dvd_summary" AS "dvd_summary",
-  --"res_partner"."active" AS "res_partner_active",
-  --"res_partner"."credit_limit" AS "credit_limit",
-  --"res_partner"."user_id" AS "res_partner_user_id",
-  --"res_partner"."title" AS "title",
-  --"res_partner"."company_id" AS "res_partner_company_id",
-  --"res_users"."active" AS "res_users_active",
-  --"res_partner"."street2" AS "street2",
-  --"res_partner"."city" AS "city",
-
-  --  "account_invoice"."amount_tax" AS "amount_tax",
-  -- "account_invoice"."amount_untaxed" AS "amount_untaxed",
-  --  "res_partner"."street" AS "street",
+  "res_partner"."city" AS "city",
+  "account_invoice"."period_id" AS "period_id"
 
 FROM "public"."account_invoice_line" "account_invoice_line"
   INNER JOIN "public"."account_invoice" "account_invoice" ON ("account_invoice_line"."invoice_id" = "account_invoice"."id")
   LEFT JOIN "public"."product_product" "product_product" ON ("account_invoice_line"."product_id" = "product_product"."id")
   INNER JOIN "public"."res_partner" "res_partner" ON ("account_invoice"."partner_id" = "res_partner"."id")
--- Ver, es campo MtoM  INNER JOIN "public"."res_partner_category_rel" "res_partner_category_rel" ON ("res_partner"."id" = "res_partner_category_rel"."partner_id")
---  INNER JOIN "public"."res_partner_category" "res_partner_category" ON ("res_partner_category_rel"."category_id" = "res_partner_category"."id")
---  INNER JOIN "public"."account_journal" "account_journal" ON ("account_invoice"."journal_id" = "account_journal"."id")
---  FULL JOIN "public"."res_users" "res_users" ON ("res_partner"."user_id" = "res_users"."id")
- -- INNER JOIN "public"."res_company" "res_company" ON ("account_invoice"."company_id" = "res_company"."id")
---  FULL JOIN "public"."product_editorial" "product_editorial" ON ("product_product"."editorial_id" = "product_editorial"."id")
---  FULL JOIN "public"."product_collection" "product_collection" ON ("product_product"."collection_id" = "product_collection"."id")
-
---  FULL JOIN "public"."res_country_state" "res_country_state" ON ("res_partner"."state_id" = "res_country_state"."id")
-
   LEFT JOIN "public"."product_template" "product_template" ON ("product_product"."product_tmpl_id" = "product_template"."id")
---  INNER JOIN "public"."product_category" "product_category" ON ("product_template"."categ_id" = "product_category"."id")
 ORDER BY number ASC
-
-
  
         )""")
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

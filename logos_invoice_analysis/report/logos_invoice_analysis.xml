@@ -52,41 +52,42 @@
         <field name="model">account.invoice.line.report_logos</field>
         <field name="arch" type="xml">
             <search string="Invoices Line Logos Analysis">
-              <group>
-                    <filter string="Sale Invoice"
-                            domain="[('type','=','out_invoice')]"/>
-                    <filter string="Sale Refund"
-                            domain="[('type','=','out_refund')]"/>
-                    <filter string="Purchase Invoice"
-                            domain="[('type','=','in_invoice')]"/>
-                    <filter string="Purchase Refund"
-                            domain="[('type','=','in_refund')]"/>
-                    <separator/>
-                    <field name="name_template"/>
-                    <filter string="Draft"
-                           domain="[('state','in',['draft','proforma','proforma2'])]"
-                           help="Draft Invoices"/>
-                    <filter string="Invoiced"
-                           name="current"
-                           domain="[('state','not in', ('draft','cancel'))]"
-                           help="Open and Paid Invoices"/>
-                    <field name="date_invoice_from" filter_domain="[('date_invoice','&gt;=',self)]"/>
-                    <field name="date_invoice_to" filter_domain="[('date_invoice','&lt;=',self)]"/>
-                    <field name="city"/>
-                    <field name="state_id"/>
-                    <field name="country_id" />
-                    <field name="company_id"/>
-                    <field name="product_id"/>
-                    <field name="user_id" />
-                    <field name="collection_id"/>
-                    <field name="editorial_id"/>
-                    <field name="product_category_id" filter_domain="[('product_category_id', 'child_of', self)]"/>
-                    <field name="partner_id"/>
-                    <!-- <field name="partner_category_ids"/> -->
-                </group>
+                <filter string="Sale Invoice"
+                        domain="[('type','=','out_invoice')]"/>
+                <filter string="Sale Refund"
+                        domain="[('type','=','out_refund')]"/>
+                <filter string="Purchase Invoice"
+                        domain="[('type','=','in_invoice')]"/>
+                <filter string="Purchase Refund"
+                        domain="[('type','=','in_refund')]"/>
+                <separator/>
+                <field name="name_template"/>
+                <filter string="Draft"
+                       domain="[('state','in',['draft','proforma','proforma2'])]"
+                       help="Draft Invoices"/>
+                <filter string="Invoiced"
+                       name="current"
+                       domain="[('state','not in', ('draft','cancel'))]"
+                       help="Open and Paid Invoices"/>
+                <field name="date_invoice_from" filter_domain="[('date_invoice','&gt;=',self)]"/>
+                <field name="date_invoice_to" filter_domain="[('date_invoice','&lt;=',self)]"/>
+                <field name="isbn"/>
+                <field name="city"/>
+                <field name="state_id"/>
+                <field name="country_id" />
+                <field name="company_id"/>
+                <field name="user_id" />
+                <field name="period_id" />
+                <field name="product_id"/>
+                <field name="collection_id"/>
+                <field name="editorial_id"/>
+                <field name="product_category_id" filter_domain="[('product_category_id', 'child_of', self)]"/>
+                <field name="partner_id"/>
+                <!-- <field name="partner_category_ids"/> -->
                 <group expand="1" string="Group By...">
                     <filter string="Partner" name="partner" context="{'group_by':'partner_id'}"/>
                     <filter string="Salesman" name='user' context="{'group_by':'user_id'}"/>
+                    <filter string="Period" name='period_id' context="{'group_by':'period_id'}"/>
                     <filter string="Product" context="{'group_by':'product_id'}"/>
                     <filter string="Product Category" name="category_product" context="{'group_by':'product_category_id'}"/>
                     <filter string="Editorial" context="{'group_by':'editorial_id'}"/>
@@ -111,7 +112,7 @@
         <field name="name">Analisis de Factura de Logos</field>
         <field name="res_model">account.invoice.line.report_logos</field>
         <field name="view_type">form</field>
-        <field name="view_mode">graph,tree</field>
+        <field name="view_mode">graph</field>
         <field name="context">{}</field>
     </record>
 
