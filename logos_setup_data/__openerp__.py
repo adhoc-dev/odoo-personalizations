@@ -19,6 +19,7 @@ Logos Set Up Data
         'sale',
         'portal_sale_distributor',
         'website_sale',
+        'base_location',
     ],
     'data': [
         # Para arreglar error

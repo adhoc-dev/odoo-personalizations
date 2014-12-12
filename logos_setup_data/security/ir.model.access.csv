@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_purchase_order,purchase.order.employee (error de odoo),purchase.model_purchase_order,base.group_user,1,0,0,0
 access_crm_opportunity_report,crm.opportunity.report (error de odoo que no le da regla),crm.model_crm_opportunity_report,base.group_user,1,0,0,0
+base.access_res_country_group_user,res_country group_user,base.model_res_country,base.group_system,1,1,1,1
+base_location.ir_model_access_betterzip0,res_better_zip group_user_all,base_location.model_res_better_zip,base.group_system,1,1,1,1
+base.access_res_country_state_group_user,res_country_state group_user,base.model_res_country_state,base.group_system,1,1,1,1
