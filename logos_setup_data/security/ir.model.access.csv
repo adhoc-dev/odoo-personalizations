@@ -4,3 +4,4 @@ access_crm_opportunity_report,crm.opportunity.report (error de odoo que no le da
 base.access_res_country_group_user,res_country group_user,base.model_res_country,base.group_system,1,1,1,1
 base_location.ir_model_access_betterzip0,res_better_zip group_user_all,base_location.model_res_better_zip,base.group_system,1,1,1,1
 base.access_res_country_state_group_user,res_country_state group_user,base.model_res_country_state,base.group_system,1,1,1,1
+crm.access_crm_lead_manager,crm.lead.manager,crm.model_crm_lead,base.group_sale_salesman_all_leads,1,1,1,1
