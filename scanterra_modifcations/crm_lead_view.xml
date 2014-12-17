@@ -7,7 +7,10 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
             <field name="arch" type="xml">
-                <field name="probability" position='attributes'>
+                <field name="date_action" position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="title_action" position='attributes'>
                     <attribute name="invisible">1</attribute>
                 </field>
             </field>
