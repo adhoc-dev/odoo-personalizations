@@ -19,6 +19,7 @@ class account_invoice_line_report_logos(osv.osv):
         'discount_amount': fields.float('Discount Amount', readonly=True, group_operator="sum"),
         # Estos son campos de account inovice
         'period_id': fields.many2one('account.period', 'Period', readonly=True),
+        'fiscalyear_id': fields.many2one('account.fiscalyear', 'Fiscal Year', readonly=True),
         'date_due': fields.date('Due Date', readonly=True),
         'number': fields.char(string='Number', size=128, readonly=True),
         #        Para otras empresas seria util agregar campos de tax
@@ -136,13 +137,15 @@ SELECT
   "res_partner"."state_id" as "state_id", --n
   "res_partner"."country_id" as "country_id", --n
   "res_partner"."city" AS "city",
-  "account_invoice"."period_id" AS "period_id"
+  "account_invoice"."period_id" AS "period_id",
+  "account_period"."fiscalyear_id" AS "fiscalyear_id"
 
 FROM "public"."account_invoice_line" "account_invoice_line"
   INNER JOIN "public"."account_invoice" "account_invoice" ON ("account_invoice_line"."invoice_id" = "account_invoice"."id")
   LEFT JOIN "public"."product_product" "product_product" ON ("account_invoice_line"."product_id" = "product_product"."id")
   INNER JOIN "public"."res_partner" "res_partner" ON ("account_invoice"."partner_id" = "res_partner"."id")
   LEFT JOIN "public"."product_template" "product_template" ON ("product_product"."product_tmpl_id" = "product_template"."id")
+  INNER JOIN "public"."account_period" "account_period" ON ("account_invoice"."period_id" = "account_period"."id")
 ORDER BY number ASC
  
         )""")
