@@ -26,6 +26,7 @@ Logos Set Up Data
         'security/ir.model.access.csv',
         'security/logos_security.xml',
         'product_view.xml',
+        'crm_view.xml'
     ],
     'demo': [
     ],
