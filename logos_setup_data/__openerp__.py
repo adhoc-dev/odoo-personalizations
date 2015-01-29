@@ -20,11 +20,13 @@ Logos Set Up Data
         'portal_sale_distributor',
         'website_sale',
         'base_location',
+        'report_aeroo',
     ],
     'data': [
         # Para arreglar error
         'security/ir.model.access.csv',
         'security/logos_security.xml',
+        'report_data.xml',
         'product_view.xml',
     ],
     'demo': [
