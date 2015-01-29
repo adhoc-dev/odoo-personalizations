@@ -28,6 +28,7 @@ Logos Set Up Data
         'security/logos_security.xml',
         'report_data.xml',
         'product_view.xml',
+        'crm_view.xml'
     ],
     'demo': [
     ],
