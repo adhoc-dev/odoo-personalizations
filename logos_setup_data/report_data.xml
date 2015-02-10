@@ -6,7 +6,7 @@
         <field name="name">Picking Labels CA Report</field>
         <field name="type">ir.actions.report.xml</field>
         <field name="model">stock.picking</field>
-        <field name="report_name">picking_labels</field>
+        <field name="report_name">picking_labels_ca</field>
         <field name="report_type">aeroo</field>
         <field name="in_format">oo-odt</field>
         <field name="report_rml">logos_setup_data/picking_label_correo_arg.odt</field>
