@@ -19,7 +19,7 @@ Logos Set Up Data
         'sale',
         'portal_sale_distributor',
         'website_sale',
-        'base_location',
+        # 'base_location',
         'report_aeroo',
     ],
     'data': [
