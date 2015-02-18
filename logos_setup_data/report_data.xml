@@ -24,6 +24,21 @@
         <field eval="True" name="replace"/>
     </ir_set>
 
+    <!-- Catalogo adaptado a logos -->
+<!-- ODS Catalog -->
+    <record id="report_product_catalog_ods" model="ir.actions.report.xml">
+        <field name="name">Logos - Reporte de Catálogo de Productos - ODS</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">product.product</field>
+        <field name="report_name">report_product_catalog_ods</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-ods</field>
+        <field name="out_format" ref="report_aeroo.report_mimetypes_xls_odt"/>
+        <field name="parser_loc">product_catalog_aeroo_report/report/product_catalog_parser.py</field>
+        <field name="report_rml">logos_setup_data/product_catalog.ods</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+    </record>
 </data>
 </openerp>
 

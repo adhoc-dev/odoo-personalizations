@@ -16,10 +16,11 @@
             <field name="name">Project Issue Kretz Mods</field>
             <field name="model">project.issue</field>
             <field name="inherit_id" ref="project_issue.project_issue_form_view"/>
-            <field name="arch" type="xml">   
-                <page string="Extra Info" position="attributes">
+            <field name="arch" type="xml">
+                <!-- Error en v8 -->
+<!--                 <page string="Extra Info" position="attributes">
                     <attribute name="string">Dates</attribute>
-                </page>                
+                </page>    -->             
                <!-- No parece util para nada -->
                 <group string="Statistics" position="replace">
                     <group string="Dates">
