@@ -5,3 +5,5 @@ base.access_res_country_group_user,res_country group_user,base.model_res_country
 base_location.ir_model_access_betterzip0,res_better_zip group_user_all,base_location.model_res_better_zip,base.group_system,1,1,1,1
 base.access_res_country_state_group_user,res_country_state group_user,base.model_res_country_state,base.group_system,1,1,1,1
 crm.access_crm_lead_manager,crm.lead.manager,crm.model_crm_lead,base.group_sale_salesman_all_leads,1,1,1,1
+base.access_ir_model_data_user,ir_model_data user,base.model_ir_model_data,base.group_user,1,1,1,1
+base.access_ir_sequence_group_user,ir_sequence group_user,base.model_ir_sequence,base.group_user,1,1,0,0
