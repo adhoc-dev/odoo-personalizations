@@ -21,6 +21,7 @@ Logos Set Up Data
         'website_sale',
         # 'base_location',
         'price_security',
+        'product_price_currency',
         'logos_product_attributes',
         'product_catalog_aeroo_report',
     ],
