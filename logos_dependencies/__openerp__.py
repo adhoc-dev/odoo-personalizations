@@ -26,6 +26,7 @@ Logos Set Up Data
         'l10n_ar_chart_generic',
         'account_cancel',
         'auth_oauth',
+        'portal_fix',
         'l10n_ar_bank',
         'l10n_ar_states',
         'account_journal_security',
