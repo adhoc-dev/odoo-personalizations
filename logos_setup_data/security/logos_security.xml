@@ -5,10 +5,11 @@
 
 
     <!-- Cambiamos esta regla porque si no nos daba error con usuarios del distribuidor creados con el usuario de adrian, rarisimo -->
-    <record model="ir.rule" id="base.res_users_rule">
+    <!-- al final lo dejamos como estaba porque parece que el error venia por otro lado, ver incidencia #51 -->
+<!--     <record model="ir.rule" id="base.res_users_rule">
         <field name="groups" eval="[(4,ref('base.group_portal_distributor'))]"/>
         <field name="perm_read" eval="False"/>
-    </record>
+    </record> -->
 
     <!-- Todos los productos para distribuidores, no unicamente los publicados, por eso no lo pusimos en el modulo de dist -->
     <record model="ir.rule" id="product_template_public_distributor">
