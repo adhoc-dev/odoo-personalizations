@@ -11,6 +11,7 @@
     'website': 'www.ingadhoc.com/',
     'depends': [
         'account',
+        'l10n_ar_invoice',
         'product_bookstore',
         'logos_product_attributes',
         ],

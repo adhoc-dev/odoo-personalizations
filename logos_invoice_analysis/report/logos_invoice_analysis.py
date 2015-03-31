@@ -112,7 +112,7 @@ SELECT
   "account_invoice_line"."product_id" AS  "product_id", --n
   
   "account_invoice"."date_due" AS "date_due",
-  "account_invoice"."number" AS "number",
+  COALESCE("account_invoice"."afip_document_number", "account_invoice"."number") AS "number",
   "account_invoice"."journal_id" AS "journal_id",--n
   "account_invoice"."user_id" AS "user_id",--n
   "account_invoice"."company_id" AS "company_id",--n
