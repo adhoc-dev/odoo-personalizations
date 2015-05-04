@@ -19,7 +19,7 @@ Logos Set Up Data
         'sale',
         'portal_sale_distributor',
         'website_sale',
-        # 'base_location',
+        'base_location',
         'price_security',
         'product_price_currency',
         'logos_product_attributes',
