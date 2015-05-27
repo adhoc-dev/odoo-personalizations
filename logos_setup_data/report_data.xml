@@ -29,7 +29,7 @@
     <record id="report_product_catalog_ods" model="ir.actions.report.xml">
         <field name="name">Logos - Reporte de Catálogo de Productos - ODS</field>
         <field name="type">ir.actions.report.xml</field>
-        <field name="model">product_catalog_aeroo_report</field>
+        <field name="model">product.product_catalog_report</field>
         <field name="report_name">report_product_catalog_ods</field>
         <field name="report_type">aeroo</field>
         <field name="in_format">oo-ods</field>
