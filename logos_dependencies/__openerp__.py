@@ -46,7 +46,7 @@ Logos Set Up Data
         'sale_stock_availability',
         'portal_sale_distributor',
         'product_visible_discount',
-        'partner_state',
+        # 'partner_state',
         'partner_school',
         'partner_views_fields',
         'sale_dummy_confirmation',
