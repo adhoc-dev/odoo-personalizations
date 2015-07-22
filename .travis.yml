@@ -41,6 +41,9 @@ install:
   # oca server tools
   - git clone https://github.com/OCA/server-tools.git ${HOME}/server-tools
 
+  # oca partner-contact
+  - git clone https://github.com/OCA/partner-contact.git ${HOME}/partner-contact
+
   # repository requirements
   - pip install -r requirements.txt
 
