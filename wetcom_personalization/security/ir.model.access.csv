@@ -1,0 +1,65 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_case_section_user,crm.case.section.user,crm.model_crm_case_section,group_view,1,0,0,0
+access_account_tax_sale_manager,account.tax sale manager,account.model_account_tax,group_view,1,0,0,0
+access_account_journal_sale_manager,account.journal sale manager,account.model_account_journal,group_view,1,0,0,0
+access_account_invoice_tax_sale_manager,account.invoice.tax  sale manager,account.model_account_invoice_tax,group_view,1,0,0,0
+access_account_sequence_fiscal_year_sale_user,account.sequence.fiscalyear.sale.user,account.model_account_sequence_fiscalyear,group_view,1,0,0,0
+access_sale_order,sale.order,delivery.model_sale_order,group_view,1,0,0,0
+access_sale_order_line,sale.order.line,delivery.model_sale_order_line,group_view,1,0,0,0
+access_account_invoice_tax_salesman,account_invoice_tax salesman,account.model_account_invoice_tax,group_view,1,0,0,0
+access_account_invoice_salesman,account_invoice salesman,account.model_account_invoice,group_view,1,0,0,0
+access_account_invoice_line_salesman,account_invoice.line salesman,account.model_account_invoice_line,group_view,1,0,0,0
+access_account_payment_term_salesman,account_payment_term salesman,account.model_account_payment_term,group_view,1,0,0,0
+access_account_analytic_account_salesman,account_analytic_account salesman,account_analytic_analysis.model_account_analytic_account,group_view,1,0,0,0
+access_sale_report_salesman,sale.report,sale.model_sale_report,group_view,1,0,0,0
+access_ir_property_sales,ir.property.sales,base.model_ir_property,group_view,1,0,0,0
+access_sale_account_journal,account.journal sale order.user,account.model_account_journal,group_view,1,0,0,0
+access_res_partner_sale_user,res.partner.sale.user,account.model_res_partner,group_view,1,0,0,0
+access_product_template_sale_user,product.template sale use,account.model_product_template,group_view,1,0,0,0
+access_product_product_sale_user,product.product sale use,product.model_product_product,group_view,1,0,0,0
+access_account_fiscalyear_user,account.fiscalyear.user,account.model_account_fiscalyear,group_view,1,0,0,0
+access_account_tax_user,account.tax.user,account.model_account_tax,group_view,1,0,0,0
+access_ir_attachment_sales,ir.attachment.sales,base.model_ir_attachment,group_view,1,0,0,0
+access_res_partner_bank_type_user,res.partner.bank.type.user,base.model_res_partner_bank_type,group_view,1,0,0,0
+access_res_partner_bank_type_field_user,res.partner.bank.type.field.user,base.model_res_partner_bank_type_field,group_view,1,0,0,0
+access_product_uom_user,product.uom.user,product.model_product_uom,group_view,1,0,0,0
+access_product_pricelist_sale_user,product.pricelist.sale.user,product.model_product_pricelist,group_view,1,0,0,0
+access_account_account_salesman,account_account salesman,account.model_account_account,group_view,1,0,0,0
+access_product_supplierinfo_user,product.supplierinfo.user,product.model_product_supplierinfo,group_view,1,0,0,0
+access_account_invoice_report_salesman,account.invoice.report salesman,account.model_account_invoice_report,group_view,1,0,0,0
+access_account_move_line_salesman,account.move.line invoice,account.model_account_move_line,group_view,1,0,0,0
+access_stock_location_path,stock.location.path,stock.model_stock_location_path,group_view,1,0,0,0
+access_procurement_rule,procurement.rule.flow,procurement.model_procurement_rule,group_view,1,0,0,0
+access_stock_picking_salesman,stock_picking salesman,delivery.model_stock_picking,group_view,1,0,0,0
+access_stock_move_salesman,stock_move salesman,delivery.model_stock_move,group_view,1,0,0,0
+access_procurement_salesman,procurement.order salesman,procurement.model_procurement_order,group_view,1,0,0,0
+access_product_packaging_user,product.packaging.user,product.model_product_packaging,group_view,1,0,0,0
+access_stock_warehouse_user,stock.warehouse.user,purchase.model_stock_warehouse,group_view,1,0,0,0
+access_stock_location_user,stock.location.user,stock.model_stock_location,group_view,1,0,0,0
+access_stock_warehouse_orderpoint_sale_salesman,stock.warehouse.orderpoint,stock.model_stock_warehouse_orderpoint,group_view,1,0,0,0
+access_delivery_carrier,delivery.carrier,delivery.model_delivery_carrier,group_view,1,0,0,0
+access_delivery_grid,delivery.grid,delivery.model_delivery_grid,group_view,1,0,0,0
+access_delivery_grid_line,delivery.grid.line,delivery.model_delivery_grid_line,group_view,1,0,0,0
+access_account_analytic_analysis_summary_user_sale,account_analytic_analysis.summary.user sale,account_analytic_analysis.model_account_analytic_analysis_summary_user,group_view,1,0,0,0
+access_account_analytic_analysis_summary_month_sale,account_analytic_analysis.summary.month sale,account_analytic_analysis.model_account_analytic_analysis_summary_month,group_view,1,0,0,0
+access_account_analytic_invoice_line,account_analytic_invoice_line.user,account_analytic_analysis.model_account_analytic_invoice_line,group_view,1,0,0,0
+access_calendar_event,calendar.event,calendar.model_calendar_event,group_view,1,0,0,0
+access_calendar_event_type_sale_user,calendar.event.type.salesman,calendar.model_calendar_event_type,group_view,1,0,0,0
+access_crm_segmentation_user,crm.segmentation user,crm.model_crm_segmentation,group_view,1,0,0,0
+access_crm_segmentation_line_user,crm.segmentation.line user,crm.model_crm_segmentation_line,group_view,1,0,0,0
+access_crm_tracking_medium_user,crm.tracking.medium user,crm.model_crm_tracking_medium,group_view,1,0,0,0
+access_crm_tracking_source_user,crm.tracking.source user,crm.model_crm_tracking_source,group_view,1,0,0,0
+access_crm_lead,crm.lead,crm.model_crm_lead,group_view,1,0,0,0
+access_crm_phonecall,crm.phonecall,crm.model_crm_phonecall,group_view,1,0,0,0
+access_crm_tracking_campaign_user,crm_tracking_campaign user,crm.model_crm_tracking_campaign,group_view,1,0,0,0
+access_crm_phonecall_report_user,crm.phonecall.report.user,crm.model_crm_phonecall_report,group_view,1,0,0,0
+access_crm_opportunity_report_user,crm.opportunity.report,crm.model_crm_opportunity_report,group_view,1,0,0,0
+access_res_partner,res.partner.crm.user,account.model_res_partner,group_view,1,0,0,0
+access_res_partner_category,res.partner.category.crm.user,base.model_res_partner_category,group_view,1,0,0,0
+mail_mailgate_thread,mail.thread,mail.model_mail_thread,group_view,1,0,0,0
+access_crm_lead_report_user,crm.lead.report user,crm.model_crm_lead_report,group_view,1,0,0,0
+access_res_partner_bank_type_crm_user,res.partner.bank.type.crm.user,base.model_res_partner_bank_type,group_view,1,0,0,0
+access_crm_payment_mode_user,crm.payment.mode,crm.model_crm_payment_mode,group_view,1,0,0,0
+sale.access_sale_order_manager,sale.order.manager,delivery.model_sale_order,base.group_sale_manager,0,0,1,0
+sale.access_account_invoice_salesman,account_invoice salesman,account.model_account_invoice,base.group_sale_salesman,1,0,0,0
+sale.access_account_invoice_manager,account_invoice manager,account.model_account_invoice,base.group_sale_manager,1,0,0,0
