@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Sistemas ADHOC - ADHOC SA
-#    https://launchpad.net/~sistemas-adhoc
+#    Ingenieria ADHOC - ADHOC SA
+#    https://launchpad.net/~ingenieria-adhoc
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -37,6 +37,7 @@ It also adds those fields in sale and invoice reports.
     ],
     'depends': [
         'sale_stock',
+        'sale_order_mail_product_attachment',
     ],
     'data': [
         'product_view.xml',

@@ -20,7 +20,7 @@
 
     <!-- Agregamos grupos de configuracion de vista tree de partner -->
     <record model="res.groups" id="base.group_user">
-        <field name="implied_ids" eval="[(4,ref('partner_views_fields.group_ref')),(4,ref('partner_views_fields.group_user_id')),(4,ref('partner_views_fields.group_city')),(4,ref('partner_views_fields.group_state_id')),(4,ref('partner_views_fields.group_country_id'))]"/>
+        <field name="implied_ids" eval="[(4,ref('partner_views_fields.group_ref')),(4,ref('partner_views_fields.group_user_id')),(4,ref('partner_views_fields.group_city')),(4,ref('partner_views_fields.group_state_id')),(4,ref('partner_views_fields.group_function'))]"/>
     </record>
 
 </data>

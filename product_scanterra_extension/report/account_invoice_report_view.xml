@@ -1,17 +1,6 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
-        <record model="ir.ui.view" id="account_report_company_invoice_report_tree_view">
-            <field name="model">account.invoice.report</field>
-            <field name="inherit_id" ref="account.view_account_invoice_report_tree"/>
-            <field name="arch" type="xml">
-                <field name="categ_id" position="after">
-                    <field name="type_id" invisible="1"/>
-                    <field name="segment_id" invisible="1"/>
-                </field>
-            </field>
-        </record>
-
         <record model="ir.ui.view" id="account_report_company_invoice_report_search_view">
             <field name="model">account.invoice.report</field>
             <field name="inherit_id" ref="account.view_account_invoice_report_search"/>

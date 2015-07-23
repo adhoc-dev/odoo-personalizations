@@ -6,8 +6,12 @@
     'sequence': 14,
     'summary': '',
     'description': """
-Logos Set Up Data
-=====================
+Logos Set Up Data & customizations
+==================================
+* make user (commercial) required on partners if "customer" is true
+* no default user on partners
+* setea los campos a mostrar en la vista tree de partner
+* hacemos el campo user_id en invoices editable en cualquier momento
     """,
     'author':  'Ingenieria ADHOC',
     'website': 'www.ingadhoc.com',
@@ -19,8 +23,9 @@ Logos Set Up Data
         'sale',
         'portal_sale_distributor',
         'website_sale',
-        # 'base_location',
+        'base_location',
         'price_security',
+        'account_voucher_receipt',
         'product_price_currency',
         'logos_product_attributes',
         'product_catalog_aeroo_report',
@@ -31,7 +36,9 @@ Logos Set Up Data
         'security/logos_security.xml',
         'report_data.xml',
         'product_view.xml',
-        'crm_view.xml'
+        'receipt_view.xml',
+        'crm_view.xml',
+        'partner_view.xml',
     ],
     'demo': [
     ],
