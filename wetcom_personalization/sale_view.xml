@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="crm.menu_crm_case_phone" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+        <record id="crm.menu_crm_opportunities" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+        <record id="sale.menu_sale_order" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+        <record id="crm.menu_report_crm_phonecalls_tree" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+        <record id="base.menu_base_partner" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+        <record id="help_doc_crm.menu_crm_documentation" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+        <record id="help_doc_sale.menu_sale_documentation" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+        <record id="crm.menu_crm_config_phonecall" model="ir.ui.menu">
+            <field name="groups_id" eval="[(4, ref('group_view'))]"/>
+        </record>
+    </data>
+</openerp>

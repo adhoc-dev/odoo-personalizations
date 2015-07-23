@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+	<record id="group_view" model="res.groups">
+        <field name="name">User View</field>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="category_id" ref="base.module_category_sales_management"/>
+    </record>
+    <record id="base.group_sale_salesman" model="res.groups">
+        <field name="implied_ids" eval="[(4,ref('group_view'))]"/>
+	</record>
+
+    </data>
+</openerp>

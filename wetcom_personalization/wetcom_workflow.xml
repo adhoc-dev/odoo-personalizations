@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+    <record id="purchase.trans_bid_confirmed" model="workflow.transition">
+            <field name="group_id" ref="base.group_sale_manager"/>
+        </record>
+    </data>
+</openerp>
