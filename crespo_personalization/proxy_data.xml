@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+       
+        <record id="default_proxy_config" model="ir.config_parameter">
+            <field name="key">hw.proxy</field>
+            <field name="value">http://localhost:5000/measure</field>
+        </record>
+        
+    </data>
+</openerp>
