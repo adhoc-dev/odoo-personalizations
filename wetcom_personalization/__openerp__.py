@@ -11,10 +11,11 @@
     'website': 'www.adhoc.com.ar/',
     'depends': [
         'sale', 'crm', 'delivery', 'account_analytic_analysis', 'purchase',
-        'help_doc_crm'
+        'help_doc_crm', 'sale_commission'
     ],
     'data': [
         'security/wetcom_group.xml',
+        'security/wetcom_security.xml',
         'security/ir.model.access.csv',
         'wetcom_workflow.xml',
         'sale_view.xml'
