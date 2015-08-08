@@ -3,24 +3,12 @@ from openerp import models, fields
 
 
 AVAILABLE_PRIORITIES = [
-    ('1', 'Highest'),
-    ('2', 'High'),
-    ('3', 'Normal'),
-    ('4', 'Low'),
-    ('5', 'Lowest'),
+    ('0', 'Very Low'),
+    ('1', 'Low'),
+    ('2', 'Normal'),
+    ('3', 'High'),
+    ('4', 'Very High'),
 ]
-# AVAILABLE_PRIORITIES = [
-#     ('0', 'Low'),
-#     ('1', 'Normal'),
-#     ('2', 'High'),
-#     ]
-# AVAILABLE_PRIORITIES = [
-#     ('-1', 'Lowest'),
-#     ('0', 'fondo fa A.jpgLow'),
-#     ('1', 'Normal'),
-#     ('2', 'High'),
-#     ('3', 'Highest'),
-#     ]
 
 
 class project_issue(models.Model):

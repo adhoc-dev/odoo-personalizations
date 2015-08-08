@@ -13,7 +13,16 @@ class task(models.Model):
     date_end = fields.Datetime(track_visibility='onchange')
 
     # add custom priorities
-    priority = fields.Selection(
-        [('4', 'Very Low'), ('3', 'Low'), ('2', 'Medium'),
-            ('1', 'Important'), ('0', 'Very important')])
+    priority = fields.Selection([
+        ('0', 'Very Low'),
+        ('1', 'Low'),
+        ('2', 'Medium'),
+        ('3', 'Important'),
+        ('4', 'Very important'),
+        # ('0', 'Very important'),
+        # ('1', 'Important'),
+        # ('2', 'Medium'),
+        # ('3', 'Low'),
+        # ('4', 'Very Low'),
+        ])
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
