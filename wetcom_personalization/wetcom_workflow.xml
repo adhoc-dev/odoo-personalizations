@@ -2,8 +2,11 @@
 <openerp>
     <data>
     
-    <record id="purchase.trans_bid_confirmed" model="workflow.transition">
-            <field name="group_id" ref="base.group_sale_manager"/>
+        <record id="sale.trans_draft_sent" model="workflow.transition">
+            <field name="group_id" ref="base.group_sale_salesman_all_leads"/>
+        </record>
+        <record id="sale.trans_draft_router" model="workflow.transition">
+            <field name="group_id" ref="base.group_sale_salesman_all_leads"/>
         </record>
     </data>
 </openerp>
