@@ -17,6 +17,7 @@ Scanterra Modifications
     'website': 'www.ingadhoc.com',
     'depends': [
         'project',
+        'project_issue',
         'crm',
     ],
     'data': [
