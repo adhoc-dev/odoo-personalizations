@@ -1,22 +1,19 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import fields, osv
+from openerp import fields, models
 
 
-class task(osv.osv):
+class task(models.Model):
     _inherit = "project.task"
 
-    _columns = {
-        'name': fields.char(
-            'Task Summary', size=128, required=True,
-            select=True, track_visibility='onchange'),
-        'date_deadline': fields.date(
-            'Deadline', select=True, track_visibility='onchange'),
-        'planned_hours': fields.float(
-            'Initially Planned Hours', track_visibility='onchange',
-            help='Estimated time to do the task, usually set by the project manager when the task is in draft state.'),
-        'date_start': fields.datetime(
-            'Starting Date', select=True, track_visibility='onchange'),
-        'date_end': fields.datetime(
-            'Ending Date', select=True, track_visibility='onchange'),
-    }
+    # add track visibility
+    name = fields.Char(track_visibility='onchange')
+    date_deadline = fields.Date(track_visibility='onchange')
+    planned_hours = fields.Float(track_visibility='onchange')
+    date_start = fields.Datetime(track_visibility='onchange')
+    date_end = fields.Datetime(track_visibility='onchange')
+
+    # add custom priorities
+    priority = fields.Selection(
+        [('4', 'Very Low'), ('3', 'Low'), ('2', 'Medium'),
+            ('1', 'Important'), ('0', 'Very important')])
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
