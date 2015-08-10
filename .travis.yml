@@ -43,7 +43,8 @@ install:
 
   # oca server tools
   - git clone https://github.com/OCA/server-tools.git ${HOME}/server-tools
-
+  # oca commission
+  - git clone https://github.com/OCA/commission.git ${HOME}/commission
   # oca partner-contact
   - git clone https://github.com/OCA/partner-contact.git ${HOME}/partner-contact
 
