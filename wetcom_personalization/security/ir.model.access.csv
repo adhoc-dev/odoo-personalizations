@@ -63,3 +63,4 @@ access_crm_payment_mode_user,crm.payment.mode,crm.model_crm_payment_mode,group_v
 sale.access_sale_order_manager,sale.order.manager,delivery.model_sale_order,base.group_sale_manager,0,0,1,0
 sale.access_account_invoice_salesman,account_invoice salesman,account.model_account_invoice,base.group_sale_salesman,1,0,0,0
 sale.access_account_invoice_manager,account_invoice manager,account.model_account_invoice,base.group_sale_manager,1,0,0,0
+sale_commission.sale_order_line_agent,sale.commission.sale_order,sale_commission.model_sale_order_line_agent,,1,0,0,0
