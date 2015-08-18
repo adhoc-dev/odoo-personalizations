@@ -29,6 +29,7 @@ install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq libcups2-dev
   - pip install git+https://github.com/aeroo/aeroolib.git@master pycups==1.9.68
+  - pip install python-ldap
 
   # odoo addons web
   - git clone https://github.com/ingadhoc/odoo-web.git -b 8.0 ${HOME}/odoo-web
