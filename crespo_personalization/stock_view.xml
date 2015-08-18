@@ -6,8 +6,24 @@
             <field name="model">stock.transfer_details</field>
             <field name="inherit_id" ref="stock.view_stock_enter_transfer_details"/>
             <field name="arch" type="xml">
-                <field name="picking_destination_location_id" position="after">
-                    <field name="scale_read" widget="hw_collector"/>
+                <field name="quantity" position="before">
+                    <field name="scale_in"/>
+                    <field name="scale_out"/>
+                </field>
+
+            </field>
+        </record>
+
+
+
+        <record id="view_stock_picking_form" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <field name="product_qty" position="before">
+                        <field name="scale_in" widget="hw_collector"/>
+                        <field name="scale_out" widget="hw_collector"/>
                 </field>
             </field>
         </record>
