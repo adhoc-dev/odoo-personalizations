@@ -15,7 +15,7 @@
     ],
     'data': [
         'security/wetcom_group.xml',
-        'security/wetcom_security.xml',
+        # 'security/wetcom_security.xml',
         'security/ir.model.access.csv',
         'wetcom_workflow.xml',
         'sale_view.xml'
