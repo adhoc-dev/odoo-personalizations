@@ -3,7 +3,7 @@
     'active': True,
     'name': 'Logos Invoice Analysis',
     'category': 'Account',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'description': """
     This module provides Invoice Analysis for Logos implmentation
     """,
