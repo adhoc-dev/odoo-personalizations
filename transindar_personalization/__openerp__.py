@@ -30,7 +30,7 @@
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'depends': [
-        'stock', 'product_brand', 'website_sale'
+        'stock', 'product_brand', 'website_sale', 'product_internal_code'
     ],
     'data': ['product_view.xml'
              ],
