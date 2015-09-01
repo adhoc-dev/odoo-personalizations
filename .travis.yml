@@ -14,10 +14,21 @@ python:
   - "2.7"
 
 env:
-  # - VERSION="8.0" LINT_CHECK="1"
+  global:
+  - VERSION="8.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - TRANSIFEX_USER='jjscarafia'
+  - TRANSIFEX_ORGANIZATION='adhoc'
+  # to get secure, run 'travis encrypt TRANSIFEX_PASSWORD=[transifex_password] -r [github_repo]'
+  # example of github repo 'ingadhoc/odoo-infrastructure'
+  - secure:   secure: "xJVBu5Tt62uVyuKjI3BGQgZ9AdiO5jLporSxkOBOsQc+/UGTK79d+/ORrx7fDM64r6yI8/U2OUiGourTIEauq8rDMaHYhFLmp7zN4zrgzO/B8YoWIeBWxZ2QQYEHvHa/MspFuPyg/LyQzrpxiUJT3gjqFRNQ0mYNT50FYR/7ODeh0WzgcAJcrT4cIh0jN1RyuCUt3t+mPWwu7xSmM4guZFF6p4lVtLmKtOCYgO9K7oY73FfM08B3jwobbc5DZ0qSdwoad5p481rkXw2XTMVZ6cLYVTo+MZZIDdqW6mEbVHkOALPB8PnDfsefZlvxVPK+ByaTBfNKr/ko4Q6x0bbfEdnCnXF6NVEiDP0C/qRvUX4voGupZ7F8RlzwEPK0FKEh5o8VWTYBHNVf7eWCqgMm8KvAy9grVczDfXnxusetyqLIj4HahQOW7N6F4TLYUgralp2NSyGiD+qjLwhLkbX8t/G5Ct697WxkHSSmRnZwZNXviu5dFrrGt9GnP2Mh58qsYzZuIt/cGOavshflB3OTJAwDRDRqgF06d5azye7dy58a7Evpn7ssAUdWYpxhrGmoNIjKUNeJRX1CG4Vg0OSgDb4NHnZsbuCEmC8cIYyyGvN4UknQRySva/ozdHxn/e4a7HE6uc7CYTprG6HnHU9S/d9FPewYo8rFjmguWc4WeZg=
+
+  matrix:
+  # TODO habilitar
+  - LINT_CHECK="0"
+  - TRANSIFEX="1"
   # TODO arreglar e incluir transindar_personalization (no anda ni si quiera solo)
-  - VERSION="8.0" ODOO_REPO="odoo/odoo" LINT_CHECK="0" EXCLUDE="transindar_personalization"
-  - VERSION="8.0" UNIT_TEST="1" LINT_CHECK="0"
+  - TESTS="1" ODOO_REPO="odoo/odoo" EXCLUDE="transindar_personalization"
+  - UNIT_TEST="1"
 
 virtualenv:
   system_site_packages: true
