@@ -24,6 +24,7 @@ Scanterra Modifications
         'security/project_security.xml',
         'crm_lead_view.xml',
         'phonecall_view.xml',
+        'project_task_view.xml',
     ],
     'demo': [
     ],
