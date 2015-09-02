@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_project_filter" model="ir.ui.view">
+            <field name="name">project.task.search</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form"/>
+            <field name="arch" type="xml">
+                <group expand="0" string="Group By">
+                    <filter string="Date End" context="{'group_by':'date_end'}"/>
+                    <filter string="Date Deadline" context="{'group_by':'date_deadline'}"/>
+                    <filter string="Date Start" context="{'group_by':'date_start'}"/>
+                </group>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
+
+
