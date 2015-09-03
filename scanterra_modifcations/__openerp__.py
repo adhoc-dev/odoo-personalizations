@@ -18,12 +18,14 @@ Scanterra Modifications
     'depends': [
         'project',
         'project_issue',
+        'l10n_ar_aeroo_sale',
         'crm',
     ],
     'data': [
         'security/project_security.xml',
         'crm_lead_view.xml',
         'phonecall_view.xml',
+        'reports/sale_order_report.xml',
     ],
     'demo': [
     ],
