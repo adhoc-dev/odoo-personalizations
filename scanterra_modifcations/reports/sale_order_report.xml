@@ -20,7 +20,7 @@
         </record>
 
         <!-- uruguay report -->
-        <record id="action_aeroo_report_uy_sale_order" model="ir.actions.report.xml">
+<!--         <record id="action_aeroo_report_uy_sale_order" model="ir.actions.report.xml">
             <field name="name">Uruguay Aeroo Sale Order</field>
             <field name="type">ir.actions.report.xml</field>
             <field name="model">sale.order</field>
@@ -32,21 +32,17 @@
             <field name="parser_state">loc</field>
             <field name="report_rml">scanterra_modifcations/reports/presupuesto_AR_v6.odt</field>
             <field name="tml_source">file</field>
-            <field name="print_logo">company_logo</field> <!-- Or 'company_logo' or ''  -->
+            <field name="print_logo">company_logo</field>
             <field name="background_image" type="base64" file="scanterra_modifcations/reports/fondo_presupuesto_v2.png"/>
             <field name="use_background_image" eval="True"/>
             <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_odt"/>
-        </record>
+        </record> -->
 
-        <record model="report.configuration.line" id="sale_order_report_footer_uy">
+<!--         <record model="report.configuration.line" id="sale_order_report_footer_uy">
             <field name="report_id" ref="action_aeroo_report_uy_sale_order"/>
             <field name="name">footer</field>
-            <!-- <field name="apply_to_all" eval="False"/> -->
-            <!-- <field name="apply_to_model_id" ref="sale.model_sale_order"/> -->
             <field name="value_text">Enviar por fax la aprobación del presente presupuesto con las correspondientes autorizaciones y/o la "orden de compra". El material y la información indicadas en el presente presupuesto son confidenciales y constituyen propiedad exclusiva de SCANTERRA.</field>
-            <!-- <field name="override_values" eval="False"/> -->
-            <!-- <field name="value_boolean" eval="False"/> -->
             <field name="value_type">text</field>
-        </record>
+        </record> -->
     </data>
 </openerp>
