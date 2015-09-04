@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data noupdate="1">
-        <!-- argentinian report -->
+    <data noupdate="0">
+    <!-- argentinian srl report -->
         <record id="l10n_ar_aeroo_sale.action_aeroo_report_ar_sale_order" model="ir.actions.report.xml">
             <field name="report_rml">scanterra_modifcations/reports/presupuesto_AR_v6.odt</field>
             <!-- <field name="print_logo">company_logo</field> -->
             <field name="background_image" type="base64" file="scanterra_modifcations/reports/fondo_presupuesto_v2.png"/>
             <!-- <field name="use_background_image" eval="True"/> -->
+            <field name="company_id" search="[('name', 'ilike', 'ScanTerra S.R.L.')]"/>
         </record>
         <record model="report.configuration.line" id="sale_order_report_footer_ar">
             <field name="name">footer</field>
@@ -19,8 +20,35 @@
             <field name="value_type">text</field>
         </record>
 
-        <!-- uruguay report -->
-<!--         <record id="action_aeroo_report_uy_sale_order" model="ir.actions.report.xml">
+    <!-- argentinian srl report demo-->
+        <record id="action_aeroo_report_ar_sale_order_demo" model="ir.actions.report.xml">
+            <field name="name">Argentininan Aeroo Sale Order - Demo</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">sale.order</field>
+            <field name="sequence" eval="7"/>            
+            <field name="report_name">aeroo_report_ar_sale_order_demo</field>
+            <field name="report_type">aeroo</field>
+            <field name="in_format">oo-odt</field>
+            <field name="parser_loc">l10n_ar_aeroo_base/parser.py</field>
+            <field name="parser_state">loc</field>
+            <field name="report_rml">scanterra_modifcations/reports/presupuesto_AR_v6.odt</field>
+            <field name="tml_source">file</field>
+            <field name="print_logo">company_logo</field>
+            <field name="background_image" type="base64" file="scanterra_modifcations/reports/fondo_presupuesto_v2.png"/>
+            <field name="use_background_image" eval="True"/>
+            <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_odt"/>
+            <field name="company_id" search="[('name', 'ilike', 'Scanterra S.R.L. Demo')]"/>
+        </record>
+
+        <record model="report.configuration.line" id="sale_order_report_footer_ar_demo">
+            <field name="report_id" ref="action_aeroo_report_ar_sale_order_demo"/>
+            <field name="name">footer</field>
+            <field name="value_text">Los valores expresados en moneda extranjera serán convertidos a pesos Argentinos al tipo de cambio oficial de la fecha de emisión de las correspondientes facturas. Enviar por fax la aprobación del presente presupuesto con las correspondientes autorizaciones y/o la "orden de compra". El material y la información indicadas en el presente presupuesto son confidenciales y constituyen propiedad exclusiva de SCANTERRA.</field>
+            <field name="value_type">text</field>
+        </record>
+
+    <!-- uruguay srl report -->
+        <record id="action_aeroo_report_uy_sale_order" model="ir.actions.report.xml">
             <field name="name">Uruguay Aeroo Sale Order</field>
             <field name="type">ir.actions.report.xml</field>
             <field name="model">sale.order</field>
@@ -36,13 +64,42 @@
             <field name="background_image" type="base64" file="scanterra_modifcations/reports/fondo_presupuesto_v2.png"/>
             <field name="use_background_image" eval="True"/>
             <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_odt"/>
-        </record> -->
+            <!-- <field name="company_id" eval="4"/> -->
+            <field name="company_id" search="[('name', 'ilike', 'Scan Terra Group S.R.L.')]"/>
+        </record>
 
-<!--         <record model="report.configuration.line" id="sale_order_report_footer_uy">
+        <record model="report.configuration.line" id="sale_order_report_footer_uy">
             <field name="report_id" ref="action_aeroo_report_uy_sale_order"/>
             <field name="name">footer</field>
             <field name="value_text">Enviar por fax la aprobación del presente presupuesto con las correspondientes autorizaciones y/o la "orden de compra". El material y la información indicadas en el presente presupuesto son confidenciales y constituyen propiedad exclusiva de SCANTERRA.</field>
             <field name="value_type">text</field>
-        </record> -->
+        </record>
+
+    <!-- uruguay srl report demo -->
+        <record id="action_aeroo_report_uy_sale_order_demo" model="ir.actions.report.xml">
+            <field name="name">Uruguay Aeroo Sale Order - Demo</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">sale.order</field>
+            <field name="sequence" eval="7"/>            
+            <field name="report_name">aeroo_report_uy_sale_order_demo</field>
+            <field name="report_type">aeroo</field>
+            <field name="in_format">oo-odt</field>
+            <field name="parser_loc">l10n_ar_aeroo_base/parser.py</field>
+            <field name="parser_state">loc</field>
+            <field name="report_rml">scanterra_modifcations/reports/presupuesto_AR_v6.odt</field>
+            <field name="tml_source">file</field>
+            <field name="print_logo">company_logo</field>
+            <field name="background_image" type="base64" file="scanterra_modifcations/reports/fondo_presupuesto_v2.png"/>
+            <field name="use_background_image" eval="True"/>
+            <field name="out_format" ref="report_aeroo.report_mimetypes_pdf_odt"/>
+            <field name="company_id" search="[('name', 'ilike', 'Scan Terra Group S.R.L. Demo')]"/>
+        </record>
+
+        <record model="report.configuration.line" id="sale_order_report_footer_uy_demo">
+            <field name="report_id" ref="action_aeroo_report_uy_sale_order_demo"/>
+            <field name="name">footer</field>
+            <field name="value_text">Enviar por fax la aprobación del presente presupuesto con las correspondientes autorizaciones y/o la "orden de compra". El material y la información indicadas en el presente presupuesto son confidenciales y constituyen propiedad exclusiva de SCANTERRA.</field>
+            <field name="value_type">text</field>
+        </record>
     </data>
 </openerp>
