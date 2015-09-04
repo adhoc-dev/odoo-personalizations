@@ -8,96 +8,96 @@ msgstr ""
 "Project-Id-Version: odoo-personalizations (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-03 14:53+0000\n"
-"PO-Revision-Date: 2015-09-01 20:29+0000\n"
+"PO-Revision-Date: 2015-09-01 18:54+0000\n"
 "Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/adhoc/ingadhoc-odoo-personalizations-8-0/language/es/)\n"
+"Language-Team: English (http://www.transifex.com/adhoc/ingadhoc-odoo-personalizations-8-0/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: product_scanterra_extension
 #: view:product.template:product_scanterra_extension.product_template_search_view
 msgid "Category"
-msgstr "Categoría"
+msgstr "Category"
 
 #. module: product_scanterra_extension
 #: view:account.invoice.report:product_scanterra_extension.account_report_company_invoice_report_search_view
 #: view:sale.report:product_scanterra_extension.view_order_product_search
 msgid "Category of Product"
-msgstr "Categoría de producto"
+msgstr "Category of Product"
 
 #. module: product_scanterra_extension
 #: field:product.segment,child_id:0
 msgid "Children Segments"
-msgstr "Segmentos Hijos"
+msgstr "Children Segments"
 
 #. module: product_scanterra_extension
 #: field:product.type,child_id:0
 msgid "Children Type"
-msgstr "Tipo Hijo"
+msgstr "Children Type"
 
 #. module: product_scanterra_extension
 #: field:product.segment,create_uid:0 field:product.type,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Created by"
 
 #. module: product_scanterra_extension
 #: field:product.segment,create_date:0 field:product.type,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Created on"
 
 #. module: product_scanterra_extension
 #: constraint:product.segment:0 constraint:product.type:0
 msgid "Error ! You cannot create recursive categories."
-msgstr "Error ! No puede crear categorías recursivas."
+msgstr "Error ! You cannot create recursive categories."
 
 #. module: product_scanterra_extension
 #: help:product.type,sequence:0
 msgid "Gives the sequence order when displaying a list of product Types."
-msgstr "Da el orden en el que se mostrará la lista de tipos de productos."
+msgstr "Gives the sequence order when displaying a list of product Types."
 
 #. module: product_scanterra_extension
 #: help:product.segment,sequence:0
 msgid "Gives the sequence order when displaying a list of product segments."
-msgstr "Da el orden en el que se mostrará la lista de segmentos de productos."
+msgstr "Gives the sequence order when displaying a list of product segments."
 
 #. module: product_scanterra_extension
 #: field:product.segment,id:0 field:product.type,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_scanterra_extension
 #: model:ir.model,name:product_scanterra_extension.model_account_invoice_report
 msgid "Invoices Statistics"
-msgstr "Estadísticas de facturas"
+msgstr "Invoices Statistics"
 
 #. module: product_scanterra_extension
 #: field:product.segment,write_uid:0 field:product.type,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Last Updated by"
 
 #. module: product_scanterra_extension
 #: field:product.segment,write_date:0 field:product.type,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Last Updated on"
 
 #. module: product_scanterra_extension
 #: field:product.segment,complete_name:0 field:product.segment,name:0
 #: field:product.type,complete_name:0 field:product.type,name:0
 msgid "Name"
-msgstr "Nombre"
+msgstr "Name"
 
 #. module: product_scanterra_extension
 #: field:product.segment,parent_id:0
 msgid "Parent Segment"
-msgstr "Segmento Padre"
+msgstr "Parent Segment"
 
 #. module: product_scanterra_extension
 #: field:product.type,parent_id:0
 msgid "Parent Type"
-msgstr "Tipo Padre"
+msgstr "Parent Type"
 
 #. module: product_scanterra_extension
 #: view:account.invoice.report:product_scanterra_extension.account_report_company_invoice_report_search_view
@@ -106,7 +106,7 @@ msgstr "Tipo Padre"
 #: view:sale.report:product_scanterra_extension.view_order_product_search
 #: field:sale.report,segment_id:0
 msgid "Product Segment"
-msgstr "Segmento del Producto"
+msgstr "Product Segment"
 
 #. module: product_scanterra_extension
 #: model:ir.actions.act_window,name:product_scanterra_extension.segment_action
@@ -116,12 +116,12 @@ msgstr "Segmento del Producto"
 #: view:product.segment:product_scanterra_extension.product_segment_search_view
 #: view:product.segment:product_scanterra_extension.product_segment_tree_view
 msgid "Product Segments"
-msgstr "Segmentos de Producto"
+msgstr "Product Segments"
 
 #. module: product_scanterra_extension
 #: model:ir.model,name:product_scanterra_extension.model_product_template
 msgid "Product Template"
-msgstr "Plantilla de producto"
+msgstr "Product Template"
 
 #. module: product_scanterra_extension
 #: view:account.invoice.report:product_scanterra_extension.account_report_company_invoice_report_search_view
@@ -129,7 +129,7 @@ msgstr "Plantilla de producto"
 #: view:sale.report:product_scanterra_extension.view_order_product_search
 #: field:sale.report,type_id:0
 msgid "Product Type"
-msgstr "Tipo de Producto"
+msgstr "Product Type"
 
 #. module: product_scanterra_extension
 #: model:ir.actions.act_window,name:product_scanterra_extension.type_action
@@ -139,32 +139,32 @@ msgstr "Tipo de Producto"
 #: view:product.type:product_scanterra_extension.product_type_search_view
 #: view:product.type:product_scanterra_extension.product_type_tree_view
 msgid "Product Types"
-msgstr "Tipos de Producto"
+msgstr "Product Types"
 
 #. module: product_scanterra_extension
 #: model:ir.model,name:product_scanterra_extension.model_sale_order_line
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Sales Order Line"
 
 #. module: product_scanterra_extension
 #: model:ir.model,name:product_scanterra_extension.model_sale_report
 msgid "Sales Orders Statistics"
-msgstr "Estadísticas de pedidos de venta"
+msgstr "Sales Orders Statistics"
 
 #. module: product_scanterra_extension
 #: view:product.template:product_scanterra_extension.product_template_search_view
 #: field:product.template,segment_id:0
 msgid "Segment"
-msgstr "Segmento"
+msgstr "Segment"
 
 #. module: product_scanterra_extension
 #: field:product.segment,sequence:0 field:product.type,sequence:0
 msgid "Sequence"
-msgstr "Secuencia"
+msgstr "Sequence"
 
 #. module: product_scanterra_extension
 #: model:ir.model,name:product_scanterra_extension.model_product_type
 #: view:product.template:product_scanterra_extension.product_template_search_view
 #: field:product.template,type_id:0
 msgid "Type"
-msgstr "Tipo"
+msgstr "Type"

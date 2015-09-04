@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crespo_personalization
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: odoo-personalizations (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-03 14:53+0000\n"
+"PO-Revision-Date: 2015-09-01 18:54+0000\n"
+"Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
+"Language-Team: English (http://www.transifex.com/adhoc/ingadhoc-odoo-personalizations-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: crespo_personalization
+#: model:ir.model,name:crespo_personalization.model_stock_pack_operation
+msgid "Packing Operation"
+msgstr "Packing Operation"
+
+#. module: crespo_personalization
+#: model:ir.model,name:crespo_personalization.model_stock_transfer_details
+msgid "Picking wizard"
+msgstr "Picking wizard"
+
+#. module: crespo_personalization
+#: model:ir.model,name:crespo_personalization.model_stock_transfer_details_items
+msgid "Picking wizard items"
+msgstr "Picking wizard items"
+
+#. module: crespo_personalization
+#: field:stock.pack.operation,scale_in:0
+#: field:stock.transfer_details_items,scale_in:0
+msgid "Scale In"
+msgstr "Scale In"
+
+#. module: crespo_personalization
+#: field:stock.pack.operation,scale_out:0
+#: field:stock.transfer_details_items,scale_out:0
+msgid "Scale Out"
+msgstr "Scale Out"
