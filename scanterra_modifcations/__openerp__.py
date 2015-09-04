@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Scanterra Modifications',
-    'version': '8.0.1.1.0',
+    'version': '8.0.2.1.0',
     'category': 'Sales Management',
     'sequence': 14,
     'summary': 'Sales, Product, Category, Clasification',
@@ -26,6 +26,7 @@ Scanterra Modifications
         'crm_lead_view.xml',
         'phonecall_view.xml',
         'reports/sale_order_report.xml',
+        'reports/invoice_report.xml',
         'project_task_view.xml',
     ],
     'demo': [

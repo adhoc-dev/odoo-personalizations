@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data noupdate="0">
+    <data noupdate="1">
     <!-- argentinian srl report -->
         <record id="l10n_ar_aeroo_sale.action_aeroo_report_ar_sale_order" model="ir.actions.report.xml">
             <field name="report_rml">scanterra_modifcations/reports/presupuesto_AR_v6.odt</field>
