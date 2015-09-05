@@ -1,0 +1,78 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * scanterra_modifcations
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: odoo-personalizations (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-03 14:53+0000\n"
+"PO-Revision-Date: 2015-09-02 14:46+0000\n"
+"Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
+"Language-Team: English (http://www.transifex.com/adhoc/ingadhoc-odoo-personalizations-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: scanterra_modifcations
+#: view:project.task:scanterra_modifcations.view_project_filter
+msgid "Date Deadline"
+msgstr "Date Deadline"
+
+#. module: scanterra_modifcations
+#: view:project.task:scanterra_modifcations.view_project_filter
+msgid "Date End"
+msgstr "Date End"
+
+#. module: scanterra_modifcations
+#: view:project.task:scanterra_modifcations.view_project_filter
+msgid "Date Start"
+msgstr "Date Start"
+
+#. module: scanterra_modifcations
+#: view:project.task:scanterra_modifcations.view_project_filter
+msgid "Group By"
+msgstr "Group By"
+
+#. module: scanterra_modifcations
+#: view:crm.lead:scanterra_modifcations.crm_case_form_view_oppor
+msgid "Llamadas"
+msgstr "Llamadas"
+
+#. module: scanterra_modifcations
+#: model:ir.model,name:scanterra_modifcations.model_crm_phonecall
+msgid "Phonecall"
+msgstr "Phonecall"
+
+#. module: scanterra_modifcations
+#: view:crm.lead:scanterra_modifcations.view_crm_case_opportunities_filter
+msgid "Priority"
+msgstr "Priority"
+
+#. module: scanterra_modifcations
+#: view:crm.lead:scanterra_modifcations.crm_case_form_view_oppor
+msgid "Programar"
+msgstr "Programar"
+
+#. module: scanterra_modifcations
+#: model:ir.model,name:scanterra_modifcations.model_project_issue
+msgid "Project Issue"
+msgstr "Project Issue"
+
+#. module: scanterra_modifcations
+#: view:crm.lead:scanterra_modifcations.crm_case_form_view_oppor
+msgid "Registrar"
+msgstr "Registrar"
+
+#. module: scanterra_modifcations
+#: view:crm.lead:scanterra_modifcations.view_crm_case_opportunities_filter
+msgid "Stage"
+msgstr "Stage"
+
+#. module: scanterra_modifcations
+#: model:ir.model,name:scanterra_modifcations.model_project_task
+msgid "Task"
+msgstr "Task"

@@ -1,0 +1,23 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * wetcom_personalization
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: odoo-personalizations (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-03 14:53+0000\n"
+"PO-Revision-Date: 2015-09-01 18:54+0000\n"
+"Last-Translator: Juan Jose Scarafia <scarafia.juanjose@gmail.com>\n"
+"Language-Team: English (http://www.transifex.com/adhoc/ingadhoc-odoo-personalizations-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: wetcom_personalization
+#: model:res.groups,name:wetcom_personalization.group_view
+msgid "User View"
+msgstr "User View"
