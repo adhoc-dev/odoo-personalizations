@@ -3,6 +3,13 @@ addons:
     packages:
       - expect-dev  # provides unbuffer utility
       - python-lxml # because pip installation is slow
+      # FE for scanterar
+      - python-dev
+      - swig
+      - libffi-dev
+      - libssl-dev
+      - python-m2crypto
+      - python-httplib2
 
 language: python
 
@@ -51,7 +58,9 @@ install:
   # odoo argentina
   # TODO change to 8.0 when ready
   - git clone https://github.com/ingadhoc/odoo-argentina.git -b 8.0 ${HOME}/odoo-argentina
-  - pip install geopy==0.95.1 BeautifulSoup 
+  - pip install geopy==0.95.1 BeautifulSoup
+  # for scanterra fe
+  - pip install pyafipws pyOpenSSL suds m2crypto cryptography pysimplesoap
 
   # oca server tools
   - pip install python-ldap
