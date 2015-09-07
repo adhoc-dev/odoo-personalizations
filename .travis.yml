@@ -60,7 +60,7 @@ install:
   - git clone https://github.com/ingadhoc/odoo-argentina.git -b 8.0 ${HOME}/odoo-argentina
   - pip install geopy==0.95.1 BeautifulSoup
   # for scanterra fe
-  - pip install pyOpenSSL suds m2crypto cryptography pysimplesoap
+  - pip install pyOpenSSL suds m2crypto cryptography pysimplesoap fpdf dbf Pillow
   - pip install pyafipws
 
   # oca server tools
