@@ -18,6 +18,7 @@ Scanterra Modifications
     'depends': [
         'project',
         'project_issue',
+        'product_pack',
         'l10n_ar_aeroo_invoice',
         'l10n_ar_aeroo_einvoice',
         'l10n_ar_aeroo_sale',
