@@ -31,7 +31,6 @@ Logos Set Up Data
         'l10n_ar_states',
         'account_journal_security',
         'account_clean_cancelled_invoice_number',
-        'adhoc_base_setup',
         'multi_store',
         'product_price_currency',
         'product_unique',
