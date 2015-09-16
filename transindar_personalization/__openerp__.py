@@ -25,12 +25,17 @@
     'version': '8.0.0.1.0',
     'description': """
     Transindar Personalization
-    ==========================
     """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'depends': [
-        'stock', 'product_brand', 'website_sale', 'product_internal_code'
+        'stock',
+        'product_brand',
+        'website_sale',
+        'product_internal_code',
+        'product_cost_currency',
+        'product_price_currency',
+        'product_sale_price_by_margin'
     ],
     'data': ['product_view.xml'
              ],
