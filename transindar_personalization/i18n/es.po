@@ -1,24 +1,40 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* transindar_personalization
+# 	* transindar_personalization
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-26 15:21+0000\n"
-"PO-Revision-Date: 2015-08-26 15:21+0000\n"
+"POT-Creation-Date: 2015-09-15 13:53+0000\n"
+"PO-Revision-Date: 2015-09-15 10:59-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_form
+msgid "Accounting"
+msgstr "Contabilidad"
 
 #. module: transindar_personalization
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Codigo de Barra"
 msgstr "Codigo de Barra"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_form
+msgid "Cost Price"
+msgstr "Precio de coste"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_form
+msgid "Costs Price"
+msgstr "Precio de costos"
 
 #. module: transindar_personalization
 #: field:product.template,location_1:0
@@ -31,12 +47,81 @@ msgid "Location 2"
 msgstr "Ubicación  2"
 
 #. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_form
+msgid "Prices and Costs"
+msgstr "Precios Y Costos"
+
+#. module: transindar_personalization
+#: model:ir.model,name:transindar_personalization.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_product_template
 msgid "Product Template"
-msgstr "Plantilla de producto"
+msgstr "Plantilla de Producto"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_discount_1:0
+msgid "Replanishment Discount 1"
+msgstr "Descuento 1"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_discount_2:0
+msgid "Replanishment Discount 2"
+msgstr "Descuento 2"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_discount_3:0
+msgid "Replanishment Discount 3"
+msgstr "Descuento 3"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_discount_4:0
+msgid "Replanishment Discount 4"
+msgstr "Descuento 4"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_surcharge_1:0
+msgid "Replanishment Surcharge 1"
+msgstr "Recargo 1"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_surcharge_2:0
+msgid "Replanishment Surcharge 2"
+msgstr "Recargo 2"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_surcharge_3:0
+msgid "Replanishment Surcharge 3"
+msgstr "Recargo 3"
+
+#. module: transindar_personalization
+#: field:product.template,replanishment_surcharge_4:0
+msgid "Replanishment Surcharge 4"
+msgstr "Recargo 4"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_form
+msgid "Sale Price"
+msgstr "Precio de venta"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_form
+msgid "Sale Price:"
+msgstr "Precio de venta:"
+
+#. module: transindar_personalization
+#: field:product.template,sale_margin:0
+msgid "Sale margin"
+msgstr "Margen de venta"
+
+#. module: transindar_personalization
+#: field:product.template,sale_surcharge:0
+msgid "Sale surcharge"
+msgstr "Valor fijo adicional"
 
 #. module: transindar_personalization
 #: view:product.template:transindar_personalization.view_product_tree
 msgid "True"
 msgstr "True"
-
