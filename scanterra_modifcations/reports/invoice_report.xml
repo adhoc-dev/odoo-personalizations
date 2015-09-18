@@ -4,7 +4,7 @@
         <!-- Argentinian e invoice -->
         <record id="l10n_ar_aeroo_einvoice.action_aeroo_report_ar_einvoice" model="ir.actions.report.xml">
             <field name="report_rml">scanterra_modifcations/reports/einvoice_scanterra.odt</field>
-            <field name="background_image" type="base64" file="scanterra_modifcations/reports/fondo_fa_E.jpg"/>
+            <field name="background_image" type="base64" file="scanterra_modifcations/reports/fondo_fe_generico1.jpg"/>
         </record>
 
     <!-- Argentinian Printed Invoice -->
