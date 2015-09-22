@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from openerp import fields, models
+from openerp import fields, models, api
 
 
 class task(models.Model):
@@ -25,4 +25,13 @@ class task(models.Model):
         # ('3', 'Low'),
         # ('4', 'Very Low'),
         ])
+
+    @api.multi
+    def write(self, vals):
+        if vals.get('user_id') and 'date_start' not in vals:
+            for line in self:
+                vals['date_start'] = line.date_start
+                super(task, line).write(vals)
+            return True
+        return super(task, self).write(vals)
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
