@@ -21,7 +21,7 @@
 
 {
     'name': 'Product Scanterra Extension',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.1.0',
     'category': 'Sales Management',
     'sequence': 14,
     'summary': 'Sales, Product, Category, Clasification',
@@ -31,13 +31,14 @@ Product Scanterra Extension
 Adds new clasification for products called "product communication block" and "product segment". 
 It also adds those fields in sale and invoice reports.
     """,
-    'author':  'Ingenieria ADHOC',
+    'author':  'ADHOC SA',
     'website': 'www.ingadhoc.com',
     'images': [
     ],
     'depends': [
-        'sale_stock',
-        'sale_order_mail_product_attachment',
+        'product',
+        # 'sale_stock',
+        # 'sale_order_mail_product_attachment',
     ],
     'data': [
         'product_view.xml',
