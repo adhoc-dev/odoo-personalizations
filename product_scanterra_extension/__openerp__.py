@@ -36,9 +36,8 @@ It also adds those fields in sale and invoice reports.
     'images': [
     ],
     'depends': [
-        'product',
-        # 'sale_stock',
-        # 'sale_order_mail_product_attachment',
+        # depends on sale for report modification
+        'sale',
     ],
     'data': [
         'product_view.xml',
