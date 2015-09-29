@@ -1,40 +1,53 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* transindar_personalization
+#	* transindar_personalization
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-15 13:53+0000\n"
-"PO-Revision-Date: 2015-09-15 10:59-0300\n"
+"POT-Creation-Date: 2015-09-29 11:53+0000\n"
+"PO-Revision-Date: 2015-09-29 11:53+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 1.5.4\n"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Accounting"
 msgstr "Contabilidad"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Codigo de Barra"
 msgstr "Codigo de Barra"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Cost Price"
 msgstr "Precio de coste"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Costs Price"
 msgstr "Precio de costos"
+
+#. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Dates"
+msgstr "Fechas"
+
+#. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Effective Date Budget"
+msgstr "Fecha de Validez del Presupuesto"
 
 #. module: transindar_personalization
 #: field:product.template,location_1:0
@@ -47,6 +60,7 @@ msgid "Location 2"
 msgstr "Ubicación  2"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Prices and Costs"
 msgstr "Precios Y Costos"
@@ -102,26 +116,39 @@ msgid "Replanishment Surcharge 4"
 msgstr "Recargo 4"
 
 #. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Requested Delivery Date"
+msgstr "Fecha de Entrega Solicitada"
+
+#. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Sale Price"
 msgstr "Precio de venta"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Sale Price:"
-msgstr "Precio de venta:"
+msgstr "Precio de Venta:"
 
 #. module: transindar_personalization
-#: field:product.template,sale_margin:0
-msgid "Sale margin"
-msgstr "Margen de venta"
-
-#. module: transindar_personalization
-#: field:product.template,sale_surcharge:0
-msgid "Sale surcharge"
-msgstr "Valor fijo adicional"
+#: model:ir.model,name:transindar_personalization.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Líneas de Pedido de Venta"
 
 #. module: transindar_personalization
 #: view:product.template:transindar_personalization.view_product_tree
 msgid "True"
 msgstr "True"
+
+#. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Validity of Budget Day"
+msgstr "Días de Validez del Presupuesto"
+
+#. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "{'invisible': True}"
+msgstr "{'invisible': True}"
+
