@@ -36,7 +36,6 @@ Transindar Personalization
         'product_internal_code',
         'product_cost_currency',
         'product_price_currency',
-<<<<<<< HEAD
         'partner_internal_code',
         'product_sale_price_by_margin',
         'sale_three_discounts',
@@ -44,22 +43,14 @@ Transindar Personalization
         'sale_procurement_date_confirm',
         'l10n_ar_invoice',
         'purchase_order_type',
-        'sale_order_dates'
+        'sale_order_dates',
+        'sale_global_discount'
     ],
     'data': [
         'product_view.xml',
         'sale_order_view.xml'
-    ],
-=======
-        'product_sale_price_by_margin',
-        'sale_three_discounts',
-        'sale_global_discount',
-    ],
-    'data': [
-        'product_view.xml',
         'wizard/sale_global_discount_wizard_view.xml',
-             ],
->>>>>>> d2ec9e3a6ac6aad2fadc8608eaf20e341b4700c5
+    ],
     'demo': [],
     'test': [],
     'installable': True,
