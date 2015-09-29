@@ -27,6 +27,37 @@ class product_template(models.Model):
 class ProductProduct(models.Model):
     _inherit = 'product.product'
 
+    supplier_code = fields.Char(
+        related='seller_ids.product_code', string="Supplier Code")
+    location_1 = fields.Char(
+        related='product_tmpl_id.location_1', String='Location 1')
+    location_2 = fields.Char(
+        related='product_tmpl_id.location_2', String='Location 2')
+    replanishment_discount_1 = fields.Float(
+        related='product_tmpl_id.replanishment_discount_1',
+        string='Replanishment Discount 1')
+    replanishment_discount_2 = fields.Float(
+        related='product_tmpl_id.replanishment_discount_2',
+        string='Replanishment Discount 2')
+    replanishment_discount_3 = fields.Float(
+        related='product_tmpl_id.replanishment_discount_3',
+        string='Replanishment Discount 3')
+    replanishment_discount_4 = fields.Float(
+        related='product_tmpl_id.replanishment_discount_4',
+        string='Replanishment Discount 4')
+    replanishment_surcharge_1 = fields.Float(
+        related='product_tmpl_id.replanishment_surcharge_1',
+        string='Replanishment Surcharge 1')
+    replanishment_surcharge_2 = fields.Float(
+        related='product_tmpl_id.replanishment_surcharge_2',
+        string='Replanishment Surcharge 2')
+    replanishment_surcharge_3 = fields.Float(
+        related='product_tmpl_id.replanishment_surcharge_3',
+        string='Replanishment Surcharge 3')
+    replanishment_surcharge_4 = fields.Float(
+        related='product_tmpl_id.replanishment_surcharge_4',
+        string='Replanishment Surcharge 4')
+
     @api.one
     @api.depends(
         # because of being stored

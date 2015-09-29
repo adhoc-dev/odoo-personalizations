@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+       
+
+        <record id="view_sale_order_tree" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <field name="requested_date" position="replace"/>
+                <field name="commitment_date" position="replace"/>
+                <field name="effective_date" position="replace"/>
+                <separator string="Dates" position="replace"/>
+                <field name="date_order" position="replace"/>
+                <field name="validity_days" position="replace"/>
+                <field name="validity_date" position="replace"/>
+                <field name="payment_term" position="replace"/>
+                <field name="pricelist_id" position="after">
+                    <field name="payment_term"/>
+                </field>
+                <xpath expr="//notebook" position="before">
+                    <group>
+                        <group>
+                            <field name="date_order"/>
+                            <field name="validity_days" string="Validity of Budget Day"/>
+                            <field name="validity_date" string="Effective Date Budget"/>
+                        </group>
+                        <group>
+                            <field name="requested_date" on_change="onchange_requested_date(requested_date, commitment_date)" string="Requested Delivery Date"/>
+                            <field name="commitment_date" />
+                            <field name="effective_date"/>
+                        </group>
+                    </group>
+                </xpath>
+
+                <xpath expr="//field[@name='order_line']//tree//field[@name='name']" position="after">
+                    <field name="product_brand_id"/>
+                    <field name="supplier_code"/>
+                    <field name="internal_code"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='product_uom']" position="attributes">
+                    <attribute name="attrs">{'invisible': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='tax_id']" position="replace"/>
+            </field>
+        </record>
+    </data>
+</openerp>
