@@ -32,7 +32,7 @@ Transindar Personalization
     'depends': [
         'stock',
         'product_brand',
-        'website_sale',
+        'product_website_categ_search',
         'product_internal_code',
         'product_cost_currency',
         'product_price_currency',
@@ -48,8 +48,8 @@ Transindar Personalization
     ],
     'data': [
         'product_view.xml',
-        'sale_order_view.xml'
-        'wizard/sale_global_discount_wizard_view.xml',
+        'sale_order_view.xml',
+        'wizard/sale_global_discount_wizard_view.xml'
     ],
     'demo': [],
     'test': [],
