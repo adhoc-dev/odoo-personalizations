@@ -3,6 +3,4 @@
 # For copyright and license notices, see __openerp__.py file in module root
 # directory
 ##############################################################################
-from . import product
-from . import sale_order
-from . import wizard
+from . import sale_global_discount_wizard
