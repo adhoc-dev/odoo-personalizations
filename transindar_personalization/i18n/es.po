@@ -1,19 +1,20 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* transindar_personalization
+# 	* transindar_personalization
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-29 11:53+0000\n"
-"PO-Revision-Date: 2015-09-29 11:53+0000\n"
+"POT-Creation-Date: 2015-09-30 15:39+0000\n"
+"PO-Revision-Date: 2015-09-30 12:40-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
 
 #. module: transindar_personalization
 #: view:product.product:transindar_personalization.view_product_product_form
@@ -45,6 +46,13 @@ msgid "Dates"
 msgstr "Fechas"
 
 #. module: transindar_personalization
+#: field:sale.order.global_discount.wizard,discount1:0
+#: field:sale.order.global_discount.wizard,discount2:0
+#: field:sale.order.global_discount.wizard,discount3:0
+msgid "Discount 1 (%)"
+msgstr "Descuento 1 (%)"
+
+#. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Effective Date Budget"
 msgstr "Fecha de Validez del Presupuesto"
@@ -73,7 +81,22 @@ msgstr "Producto"
 #. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_product_template
 msgid "Product Template"
-msgstr "Plantilla de Producto"
+msgstr "Plantilla de producto"
+
+#. module: transindar_personalization
+#: model:ir.model,name:transindar_personalization.model_product_public_category
+msgid "Public Category"
+msgstr "Categoría pública"
+
+#. module: transindar_personalization
+#: field:product.template,public_categ_2_ids:0
+msgid "Public Category2"
+msgstr "Categoría pública 2"
+
+#. module: transindar_personalization
+#: field:product.template,public_categ_3_ids:0
+msgid "Public Category3"
+msgstr "Categoría pública 3"
 
 #. module: transindar_personalization
 #: field:product.template,replanishment_discount_1:0
@@ -151,4 +174,3 @@ msgstr "Días de Validez del Presupuesto"
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "{'invisible': True}"
 msgstr "{'invisible': True}"
-
