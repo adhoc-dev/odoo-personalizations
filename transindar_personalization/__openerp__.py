@@ -49,7 +49,6 @@ Transindar Personalization
     'data': [
         'product_view.xml',
         'sale_order_view.xml',
-        'wizard/sale_global_discount_wizard_view.xml'
     ],
     'demo': [],
     'test': [],
