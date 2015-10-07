@@ -22,7 +22,7 @@
     'active': True,
     'name': 'Transindar Personalization',
     'category': 'Stock',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.1.1',
     'description': """
 Transindar Personalization
 ==========================
@@ -32,18 +32,24 @@ Transindar Personalization
     'depends': [
         'stock',
         'product_brand',
-        'website_sale',
+        'product_website_categ_search',
         'product_internal_code',
         'product_cost_currency',
         'product_price_currency',
+        'partner_internal_code',
         'product_sale_price_by_margin',
         'sale_three_discounts',
-        'sale_global_discount',
+        'sale_order_validity',
+        'sale_procurement_date_confirm',
+        'l10n_ar_invoice',
+        'purchase_order_type',
+        'sale_order_dates',
+        'sale_global_discount'
     ],
     'data': [
         'product_view.xml',
-        'wizard/sale_global_discount_wizard_view.xml',
-             ],
+        'sale_order_view.xml',
+    ],
     'demo': [],
     'test': [],
     'installable': True,
