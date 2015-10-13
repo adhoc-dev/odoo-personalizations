@@ -36,14 +36,25 @@
                 </xpath>
 
                 <xpath expr="//field[@name='order_line']//tree//field[@name='name']" position="after">
-                    <field name="product_brand_id"/>
-                    <field name="supplier_code"/>
-                    <field name="internal_code"/>
+                    <field name="product_brand_id" string="Brand"/>
+                    <field name="supplier_code" string="Supplier Code"/>
+                    <field name="internal_code" string="Internal Code"/>
                 </xpath>
-                <xpath expr="//field[@name='order_line']//tree//field[@name='product_uom']" position="attributes">
-                    <attribute name="attrs">{'invisible': True}</attribute>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='discount3']" position="after">
+                    <field name="price_reduce" string="Discounted Unit Price"/>
                 </xpath>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='virtual_available']" position="replace"/> 
+                <xpath expr="//field[@name='order_line']//tree//field[@name='discount']" position="replace"/> 
+                <xpath expr="//field[@name='order_line']//tree//field[@name='product_uom']" position="replace"/>
                 <xpath expr="//field[@name='order_line']//tree//field[@name='tax_id']" position="replace"/>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='price_subtotal']" position="before">
+                    <field name="tax_id" widget="many2many_tags" domain="[('parent_id','=',False),('type_tax_use','&lt;&gt;','purchase')]"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='price_subtotal']" position="after">
+                    <field name="discount" groups="sale.group_discount_per_so_line"/>
+                    <field name="product_uom"/>
+                    <field name="virtual_available" groups="sale_stock_availability.see_stock_value" attrs="{'invisible':[('state','!=','draft')]}"/>
+                </xpath>
             </field>
         </record>
     </data>

@@ -30,7 +30,7 @@ Transindar Personalization
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'depends': [
-        'stock',
+        'sale_stock_availability',
         'product_brand',
         'product_website_categ_search',
         'product_internal_code',
@@ -44,7 +44,8 @@ Transindar Personalization
         'l10n_ar_invoice',
         'purchase_order_type',
         'sale_order_dates',
-        'sale_global_discount'
+        'sale_global_discount',
+        'web_sheet_full_width'
     ],
     'data': [
         'product_view.xml',
