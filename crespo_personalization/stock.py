@@ -7,7 +7,7 @@ from openerp import fields, models, api
 from datetime import datetime
 
 
-class stock(models.Model):
+class stock(models.TransientModel):
 
     _inherit = 'stock.transfer_details'
 
@@ -43,7 +43,8 @@ class stock(models.Model):
                     processed_ids.append(packop_id.id)
         # Delete the others
         packops = self.env['stock.pack.operation'].search(
-            ['&', ('picking_id', '=', self.picking_id.id), '!', ('id', 'in', processed_ids)])
+            ['&', ('picking_id', '=', self.picking_id.id), '!',
+                ('id', 'in', processed_ids)])
         packops.unlink()
 
         # Execute the transfer of the picking
@@ -60,7 +61,7 @@ class stock_pack_operation(models.Model):
     scale_out = fields.Float(string="Scale Out")
 
 
-class transfer_details_items(models.Model):
+class transfer_details_items(models.TransientModel):
 
     _inherit = 'stock.transfer_details_items'
 
@@ -71,3 +72,29 @@ class transfer_details_items(models.Model):
     @api.onchange('scale_in', 'scale_out')
     def update_quantity(self):
         self.quantity = self.scale_in - self.scale_out
+
+    @api.multi
+    def get_scale_in_out(self):
+        self.ensure_one()
+        name = 'Read Scale'
+        view_id = self.env['ir.model.data'].xmlid_to_res_id(
+            'crespo_personalization.view_transfer_details_items_form')
+        res = {
+            'name': name,
+            'view_mode': 'form',
+            'view_id': view_id,
+            'view_type': 'form',
+            'res_model': 'stock.transfer_details_items',
+            'type': 'ir.actions.act_window',
+            'nodestroy': True,
+            'target': 'new',
+            'res_id': self.id,
+            'domain': '[]',
+            'context': self._context
+            }
+        return res
+
+    @api.multi
+    def set_scale_in_out(self):
+        self.ensure_one()
+        return self.transfer_id.wizard_view()

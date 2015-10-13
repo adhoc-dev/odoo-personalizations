@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+
+        <record id="view_transfer_details_items_form" model="ir.ui.view">
+            <field name="name">stock.transfer_details_items.form</field>
+            <field name="model">stock.transfer_details_items</field>
+            <field name="arch" type="xml">
+                <form string="Scale Read">
+                    <group>
+                        <field name="scale_in" widget="hw_collector"/>
+                        <field name="scale_out" widget="hw_collector"/>
+                        <field name="quantity"/>
+                    </group>
+                    <footer>
+                        <button string="Confirm" name="set_scale_in_out" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+                </form>
+            </field>
+        </record>
+
         <record id="view_transfer_details_form" model="ir.ui.view">
             <field name="name">stock.transfer_details.form</field>
             <field name="model">stock.transfer_details</field>
@@ -9,11 +29,10 @@
                 <field name="quantity" position="before">
                     <field name="scale_in"/>
                     <field name="scale_out"/>
+                    <button name="get_scale_in_out" string="Read" type="object" icon="STOCK_LEAVE_FULLSCREEN"/>
                 </field>
-
             </field>
         </record>
-
 
 
         <record id="view_stock_picking_form" model="ir.ui.view">
