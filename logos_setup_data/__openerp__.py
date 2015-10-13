@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Logos Set Up Data',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.1.0',
     'category': 'Accounting',
     'sequence': 14,
     'summary': '',
@@ -25,7 +25,6 @@ Logos Set Up Data & customizations
         'website_sale',
         'base_location',
         'price_security',
-        'account_voucher_receipt',
         'product_price_currency',
         'logos_product_attributes',
         'product_catalog_aeroo_report',
@@ -36,7 +35,6 @@ Logos Set Up Data & customizations
         'security/logos_security.xml',
         'report_data.xml',
         'product_view.xml',
-        'receipt_view.xml',
         'crm_view.xml',
         'partner_view.xml',
     ],
