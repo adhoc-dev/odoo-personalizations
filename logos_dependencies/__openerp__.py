@@ -19,7 +19,6 @@ Logos Set Up Data
         # 'crm',
         # Dependencias del proyecto
         'crm',
-        'l10n_ar_invoice_receipt',
         'account_accountant',
         'account_check',
         'account_followup',
