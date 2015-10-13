@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record id="view_product_public_category_search" model="ir.ui.view">
+            <field name="name">product.public.category.search</field>
+            <field name="model">product.public.category</field>
+            <field name="arch" type="xml">
+                <search string="Search Category">
+                    <field name="name"/>
+                    <field name="parent_id"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>
