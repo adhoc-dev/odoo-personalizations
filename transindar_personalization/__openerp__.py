@@ -22,7 +22,7 @@
     'active': True,
     'name': 'Transindar Personalization',
     'category': 'Stock',
-    'version': '8.0.0.1.1',
+    'version': '8.0.0.2.1',
     'description': """
 Transindar Personalization
 ==========================
@@ -50,6 +50,7 @@ Transindar Personalization
     'data': [
         'product_view.xml',
         'sale_order_view.xml',
+        'category_public_view.xml'
     ],
     'demo': [],
     'test': [],
