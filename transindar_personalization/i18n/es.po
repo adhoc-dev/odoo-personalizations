@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-30 15:39+0000\n"
-"PO-Revision-Date: 2015-09-30 12:40-0300\n"
+"POT-Creation-Date: 2015-10-13 14:58+0000\n"
+"PO-Revision-Date: 2015-10-13 11:58-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,11 @@ msgstr ""
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Accounting"
 msgstr "Contabilidad"
+
+#. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Brand"
+msgstr "Marca"
 
 #. module: transindar_personalization
 #: view:product.product:transindar_personalization.view_product_product_form
@@ -47,15 +52,33 @@ msgstr "Fechas"
 
 #. module: transindar_personalization
 #: field:sale.order.global_discount.wizard,discount1:0
+msgid "Discount 1"
+msgstr "Descuento 1"
+
+#. module: transindar_personalization
 #: field:sale.order.global_discount.wizard,discount2:0
+msgid "Discount 2"
+msgstr "Descuento 2"
+
+#. module: transindar_personalization
 #: field:sale.order.global_discount.wizard,discount3:0
-msgid "Discount 1 (%)"
-msgstr "Descuento 1 (%)"
+msgid "Discount 3"
+msgstr "Descuento 3"
+
+#. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Discounted Unit Price"
+msgstr "Precio unitario con descuento"
 
 #. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Effective Date Budget"
 msgstr "Fecha de Validez del Presupuesto"
+
+#. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Internal Code"
+msgstr "Código Interno"
 
 #. module: transindar_personalization
 #: field:product.template,location_1:0
@@ -161,6 +184,11 @@ msgid "Sales Order Line"
 msgstr "Líneas de Pedido de Venta"
 
 #. module: transindar_personalization
+#: view:sale.order:transindar_personalization.view_sale_order_tree
+msgid "Supplier Code"
+msgstr "Código Proveedor"
+
+#. module: transindar_personalization
 #: view:product.template:transindar_personalization.view_product_tree
 msgid "True"
 msgstr "True"
@@ -169,8 +197,3 @@ msgstr "True"
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Validity of Budget Day"
 msgstr "Días de Validez del Presupuesto"
-
-#. module: transindar_personalization
-#: view:sale.order:transindar_personalization.view_sale_order_tree
-msgid "{'invisible': True}"
-msgstr "{'invisible': True}"
