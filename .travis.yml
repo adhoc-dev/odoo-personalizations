@@ -55,7 +55,7 @@ install:
 
   # odoo argentina
   # TODO change to 8.0 when ready
-  - git clone https://github.com/ingadhoc/odoo-argentina.git -b 8.0 ${HOME}/odoo-argentina
+  - git clone https://github.com/ingadhoc/odoo-argentina.git ${HOME}/odoo-argentina -b ${VERSION}
   - pip install geopy==0.95.1 BeautifulSoup #because l10n_ar_states is installed
   # for scanterra fe
   - pip install pyOpenSSL suds m2crypto cryptography pysimplesoap fpdf dbf Pillow
@@ -63,16 +63,16 @@ install:
 
   # oca server tools
   - pip install python-ldap
-  - git clone https://github.com/OCA/server-tools.git ${HOME}/server-tools
+  - git clone https://github.com/OCA/server-tools.git ${HOME}/server-tools -b ${VERSION}
 
   # oca commission
-  - git clone https://github.com/OCA/commission.git ${HOME}/commission
+  - git clone https://github.com/OCA/commission.git ${HOME}/commission -b ${VERSION}
 
   # oca partner-contact
-  - git clone https://github.com/OCA/partner-contact.git ${HOME}/partner-contact
+  - git clone https://github.com/OCA/partner-contact.git ${HOME}/partner-contact -b ${VERSION}
 
   # oca product-attribute
-  - git clone https://github.com/OCA/product-attribute.git ${HOME}/product-attribute
+  - git clone https://github.com/OCA/product-attribute.git ${HOME}/product-attribute -b ${VERSION}
 
   # repository requirements
   - pip install -r requirements.txt
