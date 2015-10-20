@@ -3,11 +3,11 @@
 # For copyright and license notices, see __openerp__.py file in module root
 # directory
 ##############################################################################
-from openerp import fields, models, api
+from openerp import fields, models, api, _
 from datetime import datetime
 
 
-class stock(models.TransientModel):
+class stock_transfer_details(models.TransientModel):
 
     _inherit = 'stock.transfer_details'
 
@@ -53,20 +53,73 @@ class stock(models.TransientModel):
         return True
 
 
+class stock_move(models.Model):
+
+    _inherit = 'stock.move'
+
+    scale_in = fields.Float(
+        string="Balanza Entrada",
+        default=0.0,
+        copy=False,
+        )
+
+    @api.multi
+    def action_get_scale_in(self):
+        self.ensure_one()
+        view_id = self.env['ir.model.data'].xmlid_to_res_id(
+            'crespo_personalization.view_stock_move_get_scale_in_form')
+        res = {
+            'type': 'ir.actions.act_window',
+            'name': _("Read Scale In"),
+            'res_model': 'stock.move',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'view_id': view_id,
+            'context': self._context,
+            'res_id': self.id,
+            'target': 'new',
+        }
+        return res
+
+
 class stock_pack_operation(models.Model):
 
     _inherit = 'stock.pack.operation'
 
-    scale_in = fields.Float(string="Scale In")
-    scale_out = fields.Float(string="Scale Out")
+    scale_in = fields.Float(
+        string="Balanza Entrada",
+        readonly=True,
+        # default=0.0,
+        )
+    scale_out = fields.Float(
+        string="Balanza Salida",
+        readonly=True,
+        # default=0.0,
+        )
+
 
 
 class transfer_details_items(models.TransientModel):
 
     _inherit = 'stock.transfer_details_items'
 
-    scale_in = fields.Float(string="Scale In")
-    scale_out = fields.Float(string="Scale Out")
+    scale_in = fields.Float(
+        string="Balanza Entrada",
+        # default=0.0,
+        # related='packop_id.scale_in',
+        compute='get_scale_in',
+        readonly=True,
+        )
+    scale_out = fields.Float(
+        string="Balanza Salida",
+        default=0.0,
+        )
+
+    @api.one
+    @api.depends('packop_id')
+    def get_scale_in(self):
+        self.scale_in = sum(self.packop_id.mapped(
+            'linked_move_operation_ids.move_id.scale_in'))
 
     @api.one
     @api.onchange('scale_in', 'scale_out')
@@ -76,7 +129,7 @@ class transfer_details_items(models.TransientModel):
     @api.multi
     def get_scale_in_out(self):
         self.ensure_one()
-        name = 'Read Scale'
+        name = 'Leer Balanza'
         view_id = self.env['ir.model.data'].xmlid_to_res_id(
             'crespo_personalization.view_transfer_details_items_form')
         res = {
