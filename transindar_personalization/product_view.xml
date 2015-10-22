@@ -19,7 +19,7 @@
                 </field>
             </field>
         </record>
-
+<!-- 
         <record id="view_product_form" model="ir.ui.view">
             <field name="name">product.template.form</field>
             <field name="model">product.template</field>
@@ -147,7 +147,7 @@
                     </page>
                 </page>
             </field>
-        </record>
+        </record> -->
 
         <record id="view_product_tree" model="ir.ui.view">
             <field name="name">product.template.tree</field>
@@ -183,8 +183,8 @@
             <field name="priority">20</field>
             <field name="arch" type="xml">
                  <field name="public_categ_ids" position="after">
-                    <field name="public_categ_2_ids"/>
-                    <field name="public_categ_3_ids"/>
+                    <field name="public_categ_ids" string="Public Category 2"/>
+                    <field name="public_categ_ids" string="Public Category 3"/>
                 </field>
             </field>
         </record>

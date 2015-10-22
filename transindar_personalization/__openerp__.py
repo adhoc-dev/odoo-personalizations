@@ -44,6 +44,7 @@ Transindar Personalization
         # 'purchase_order_type',
         # 'sale_order_dates',
         'sale_global_discount',
+        'website_sale',
         # 'web_sheet_full_width'
     ],
     'data': [
