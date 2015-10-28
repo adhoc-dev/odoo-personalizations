@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Logos Set Up Data',
-    'version': '8.0.1.1.0',
+    'version': '8.0.1.2.0',
     'category': 'Accounting',
     'sequence': 14,
     'summary': '',

@@ -5,6 +5,6 @@ from openerp import fields, models
 class product_template(models.Model):
     _inherit = 'product.template'
 
-    cia_currency_list_price = fields.Float(
+    sale_price_on_list_price_type_currency = fields.Float(
         string="Precio de venta (ARS)"
         )
