@@ -90,7 +90,7 @@
             <field name="inherit_id" ref="product_price_currency.product_template_tree_view" />
             <field name="arch" type="xml">
                 <field name="sale_price_currency_id" position="after">
-                    <field name="cia_currency_list_price"/>
+                    <field name="sale_price_on_list_price_type_currency"/>
                 </field>
                 <field name="lst_price" position="attributes">
                     <attribute name="invisible">1</attribute>
