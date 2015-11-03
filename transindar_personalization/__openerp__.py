@@ -34,6 +34,7 @@ Transindar Personalization
         'product_brand',
         'product_website_categ_search',
         'product_internal_code',
+        'stock_picking_list',
         # 'product_price_currency',
         # 'partner_internal_code',
         # 'product_sale_price_by_margin',
@@ -49,7 +50,8 @@ Transindar Personalization
     'data': [
         'product_view.xml',
         'sale_order_view.xml',
-        'category_public_view.xml'
+        'category_public_view.xml',
+        'report_data.xml'
     ],
     'demo': [],
     'test': [],
