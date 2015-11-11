@@ -1,24 +1,43 @@
+language: python
+sudo: false
+cache:
+  apt: true
+  directories:
+    - $HOME/.cache/pip
+
+python:
+  - "2.7"
+
 addons:
   apt:
+# only add the two lines below if you need wkhtmltopdf for your tests
+#    sources:
+#      - pov-wkhtmltopdf
+#    Search your sources alias here:
+#      https://github.com/travis-ci/apt-source-whitelist/blob/master/ubuntu.json
     packages:
       - expect-dev  # provides unbuffer utility
-      - python-lxml # because pip installation is slow
-      - libcups2-dev # for aeroo
+      - python-lxml  # because pip installation is slow
+      - python-simplejson
+      - python-serial
+      - python-yaml
       - wkhtmltopdf # for odoo pdf reports (tested on sale for eg.)
-      # FE for scanterar
+      - libcups2-dev # for aeroo
+      # FE
       - python-dev
       - swig
       - libffi-dev
       - libssl-dev
       - python-m2crypto
       - python-httplib2
+#     Search your packages here:
+#       https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise
+#      - wkhtmltopdf  # only add if needed and check the before_install section below
 
-language: python
-sudo: false
-cache: pip
-
-python:
-  - "2.7"
+# set up an X server to run wkhtmltopdf.
+#before_install:
+#  - "export DISPLAY=:99.0"
+#  - "sh -e /etc/init.d/xvfb start"
 
 env:
   global:
@@ -30,53 +49,34 @@ env:
   - secure: m+pWY35/CMpBD3Ka2sWc6KoNo+7HQ+JkwtqwnUqsHp2/131dJ7kzZ1OxvJ3RYqJhlRJr6e3dvbMbp18yYzaWDGT0mx4pZvvIeFO8QMzoC0J6xSIaXA7w2jvtpOqeROnPCzFS/J0c9t892g6xOKIj8/pEntWBobVSMKj+vOeyxWTQ+cDIdTjJlZidLBujvwCJHSLpg14FgQpBdGqPTem5f0t+zxt2osNB9ckedakRdevj5DlBLxstMRKRnAuf97i3FG5OkH/DpldocYz2XZYDgfe1V+YazCDdUR2FqPYW2PziQXR96DgX7L0SDUhbgZVT7vQSC3uvahicungtrSx/hZaxag7GbHWIFzODX4LIUIQ4C8ivc8wi3bU44FC3Vyh7lnBfDQW+xUncaXpmMR0kdP/fU2ZC/s3n3yAf97xC6lH2KS0oq1WXDcLtrcuxsvYzZ2XYm8K+fSJdCqhXKfd7onioFSgN8ulsCDMUReaBegEQzqBlde1qqh8Kq326TQKT1RhcX0knIng2sHqDhdgFRczktnSYXtGyUChps7C8IJtN/O7G8c4iOqaXcJu1GkJ/qtnxgaCzPkTPwrfnRPJg0VXK/gZduRhO0LQDxaplM7S/lGGKflbTUj/39W9M0I3r7dJvJxRxw8cftbFRYwbJhto6PugNS7W+P3ONhUbow4o=
 
   matrix:
-  # TODO habilitar
-  - LINT_CHECK="0"
+  # TODO enable lint check
+  #- LINT_CHECK="1"
   - TRANSIFEX="1"
   - TESTS="1" ODOO_REPO="odoo/odoo"
+# either use the two lines above or the two below. Don't change the default if
+# it's not necessary (it is only necessary if modules in your repository can't
+# be installed in the same database. And you get a huge speed penalty in your
+# tests)
+#  - TESTS="1.0" ODOO_REPO="odoo/odoo" UNIT_TEST="1"
+#  - TESTS="1.0" ODOO_REPO="OCA/OCB" UNIT_TEST="1"
 
 virtualenv:
   system_site_packages: true
 
 install:
   # aeroo reports
-  - git clone https://github.com/aeroo/aeroo_reports.git ${HOME}/aeroo_reports
   - pip install git+https://github.com/aeroo/aeroolib.git@master pycups==1.9.68
 
-  # odoo addons web
-  - git clone https://github.com/ingadhoc/odoo-web.git -b 8.0 ${HOME}/odoo-web
-
-  # odoo help
-  - git clone https://github.com/ingadhoc/odoo-help.git -b 8.0 ${HOME}/odoo-help
-
-  # odoo addons adhoc
-  - git clone https://github.com/ingadhoc/odoo-addons.git -b 8.0 ${HOME}/odoo-addons
-
   # odoo argentina
-  # TODO change to 8.0 when ready
-  - git clone https://github.com/ingadhoc/odoo-argentina.git ${HOME}/odoo-argentina -b ${VERSION}
   - pip install geopy==0.95.1 BeautifulSoup #because l10n_ar_states is installed
-  # for scanterra fe
   - pip install pyOpenSSL suds m2crypto cryptography pysimplesoap fpdf dbf Pillow
   - pip install pyafipws
 
-  # oca server tools
-  - pip install python-ldap
-  - git clone https://github.com/OCA/server-tools.git ${HOME}/server-tools -b ${VERSION}
-
-  # oca commission
-  - git clone https://github.com/OCA/commission.git ${HOME}/commission -b ${VERSION}
-
-  # oca partner-contact
-  - git clone https://github.com/OCA/partner-contact.git ${HOME}/partner-contact -b ${VERSION}
-
-  # oca product-attribute
-  - git clone https://github.com/OCA/product-attribute.git ${HOME}/product-attribute -b ${VERSION}
-
   # repository requirements
   - pip install -r requirements.txt
+  - pip install -r requirements2.txt
 
-  - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
+  - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 
@@ -84,4 +84,4 @@ script:
   - travis_run_tests
 
 after_success:
-  coveralls
+  - travis_after_tests_success
