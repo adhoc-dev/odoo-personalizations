@@ -47,7 +47,7 @@ env:
   # exclude because it is only dependencies module
   # exclude logos_setup_data because of test error with website_sale
   # TODO fix and include logos_setup_data
-  - EXCLUDE="logos_dependencies,website_sale"
+  - EXCLUDE="logos_dependencies,logos_setup_data"
   # dummy " for better formatting
   # to get secure, run 'travis encrypt TRANSIFEX_PASSWORD=[transifex_password] -r [github_repo]'
   # example of github repo 'ingadhoc/odoo-infrastructure'
