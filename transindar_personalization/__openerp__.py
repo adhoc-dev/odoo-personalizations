@@ -22,7 +22,7 @@
     'active': True,
     'name': 'Transindar Personalization',
     'category': 'Stock',
-    'version': '8.0.0.3.1',
+    'version': '8.0.0.4.1',
     'description': """
 Transindar Personalization
 ==========================
@@ -35,6 +35,7 @@ Transindar Personalization
         'product_website_categ_search',
         'product_internal_code',
         'stock_picking_list',
+        'account_invoice_prices_update',
         # 'product_price_currency',
         # 'partner_internal_code',
         # 'product_sale_price_by_margin',
