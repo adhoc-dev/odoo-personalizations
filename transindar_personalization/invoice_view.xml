@@ -8,6 +8,9 @@
             <field name="groups_id" eval="[(6, 0, [ref('group_restrict_edit')])]"/>
             <field name="priority">20</field>
             <field name="arch" type="xml">
+                <button string="Update Pricelist and Prices" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </button>
                 <field name="name" position="attributes">
                     <attribute name="readonly">True</attribute>
                 </field>
