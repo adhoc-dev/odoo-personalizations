@@ -56,6 +56,9 @@
                 <field name="payment_term" position="attributes">
                     <attribute name="readonly">True</attribute>
                 </field>
+                <field name="journal_document_class_id" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
                 <xpath expr="//page[@string='Other Info']//field[@name='partner_bank_id']" position="attributes">
                     <attribute name="readonly">True</attribute>
                 </xpath>
