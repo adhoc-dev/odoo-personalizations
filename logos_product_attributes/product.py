@@ -25,7 +25,7 @@ class product_template(models.Model):
         compute='_get_attributes',
         store=True,
         domain=[('attribute_id.name', '=', 'Colección')],
-        string='Colección')
+        string='Coleccion')
 
     @api.one
     @api.depends(
