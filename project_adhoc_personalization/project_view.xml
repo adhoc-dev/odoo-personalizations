@@ -10,7 +10,6 @@
                     <page string="Project Specifications">
                         <group>
                             <field name="project_number"/>
-                            <field name="product_owner"/>
                             <field name="sale_order_id" domain="[('partner_id', '=', partner_id)]"/>
                         </group>
                             <div class="oe_clear">
