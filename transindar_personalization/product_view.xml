@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+
+        <record id="product_template_search_view" model="ir.ui.view">
+            <field name="name">product.user.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="attributes">
+                    <attribute name="filter_domain">['|','|','|','|',('default_code','=',self),('name','ilike',self),('internal_code','=',self),('supplier_code','ilike',self),('product_brand_id.name','ilike',self)]</attribute>
+                </field>
+                <field name="product_brand_id" position="replace"/>
+                <field name="name" position="after">
+                    <field name="product_brand_id" filter_domain="[('product_brand_id','ilike',self)]"/>
+                    <field name="supplier_code" filter_domain="[('supplier_code','ilike',self)]"/>
+                    <field name="internal_code" filter_domain="[('internal_code','=',self)]"/>
+                    <field name="default_code" filter_domain="[('default_code','=',self)]"/>
+                    <field name="seller_id" filter_domain="[('seller_id','ilike',self)]"/>
+                </field>
+            </field>
+        </record>
+
+
         <record id="view_product_form" model="ir.ui.view">
             <field name="name">product.template.form</field>
             <field name="model">product.template</field>
