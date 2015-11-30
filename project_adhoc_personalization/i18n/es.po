@@ -1,0 +1,97 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_adhoc_personalization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-25 15:50+0000\n"
+"PO-Revision-Date: 2015-11-25 12:56-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: project_adhoc_personalization
+#: model:ir.actions.report.xml,name:project_adhoc_personalization.close_acta
+msgid "Close Acta"
+msgstr "Acta de Cierre"
+
+#. module: project_adhoc_personalization
+#: field:project.task,deliverable:0
+msgid "Deliverable"
+msgstr "Entregables"
+
+#. module: project_adhoc_personalization
+#: field:project.project,deliverable_ids:0
+msgid "Deliverables"
+msgstr "Entregables"
+
+#. module: project_adhoc_personalization
+#: field:project.project,partner_ids:0
+msgid "Key users"
+msgstr "Usuarios Claves"
+
+#. module: project_adhoc_personalization
+#: field:project.task,next_action:0
+msgid "Next Action"
+msgstr "Próxima Accion"
+
+#. module: project_adhoc_personalization
+#: model:ir.actions.report.xml,name:project_adhoc_personalization.opening_acta
+msgid "Opening Acta"
+msgstr "Acta de Apertura"
+
+#. module: project_adhoc_personalization
+#: model:ir.model,name:project_adhoc_personalization.model_res_partner
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: project_adhoc_personalization
+#: field:project.project,post_project_observations:0
+msgid "Post Project Implementation observations"
+msgstr "Post Project Implementation observations"
+
+#. module: project_adhoc_personalization
+#: field:project.project,post_project_leader_observations:0
+msgid "Post Project Observations(Customer)"
+msgstr "Post Project Observations(Customer)"
+
+#. module: project_adhoc_personalization
+#: field:project.project,product_owner:0
+msgid "Product owner"
+msgstr "Product owner"
+
+#. module: project_adhoc_personalization
+#: model:ir.model,name:project_adhoc_personalization.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: project_adhoc_personalization
+#: view:project.project:project_adhoc_personalization.project_form
+msgid "Project Specifications"
+msgstr "Project Specifications"
+
+#. module: project_adhoc_personalization
+#: view:project.project:project_adhoc_personalization.project_form
+msgid "Project Stages"
+msgstr "Etapas para tareas del proyecto"
+
+#. module: project_adhoc_personalization
+#: field:res.partner,project_id:0
+msgid "Project id"
+msgstr "Project id"
+
+#. module: project_adhoc_personalization
+#: field:project.project,sale_order_id:0
+msgid "Sale order"
+msgstr "Sale order"
+
+#. module: project_adhoc_personalization
+#: model:ir.model,name:project_adhoc_personalization.model_project_task
+msgid "Task"
+msgstr "Tarea"
