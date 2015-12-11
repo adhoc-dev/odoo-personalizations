@@ -40,3 +40,5 @@ class project_project(models.Model):
         string="Post Project Implementation observations")
     post_project_leader_observations = fields.Text(
         string="Post Project Observations(Customer)")
+    pre_project_implementation_observations = fields.Text(
+        string="Pre Project Implementation observations")

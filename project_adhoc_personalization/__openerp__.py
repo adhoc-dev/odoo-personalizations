@@ -22,7 +22,7 @@
     'active': True,
     'name': 'Project Adhoc Personalization',
     'category': 'Stock',
-    'version': '8.0.0.0.0',
+    'version': '8.0.0.1.0',
     'description': """
 Project Adhoc Personalization
 =============================

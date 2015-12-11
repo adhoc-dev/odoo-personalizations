@@ -15,11 +15,18 @@
                             <div class="oe_clear">
                                 <label for="partner_ids"/>
                             </div>
-                            <field name="partner_ids" widget="many2many"/>
+                            <field name="partner_ids" widget="many2many">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="function"/>
+                                    <field name="mobile"/>
+                                    <field name="email"/>
+                                </tree>
+                            </field>
                             <div class="oe_clear">
                                 <label for="deliverable_ids"/>
                             </div>
-                            <field name="deliverable_ids" widget="many2many">
+                            <field name="deliverable_ids" readonly="True">
                                 <tree>
                                     <field name="name"/>
                                     <field name="user_id"/>
@@ -28,6 +35,10 @@
                                     <field name="date_end"/>
                                 </tree>
                             </field>
+                            <div class="oe_clear">
+                                <label for="pre_project_implementation_observations"/>
+                            </div>
+                            <field name="pre_project_implementation_observations"/>
                             <div class="oe_clear">
                                 <label for="post_project_observations"/>
                             </div>
