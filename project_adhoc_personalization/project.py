@@ -21,7 +21,7 @@ class project_project(models.Model):
 
     project_number = fields.Char(
         related='analytic_account_id.code',
-        string="Project Number",
+        string="Numero del Proyecto",
         readonly=True
     )
     sale_order_id = fields.Many2one(
