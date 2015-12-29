@@ -15,6 +15,7 @@ class product_template(models.Model):
         related='seller_ids.product_code', string="Supplier Code")
     location_1 = fields.Char(String='Location 1')
     location_2 = fields.Char(String='Location 2')
+    quantity_per_pack = fields.Char(String='Cantidad por Pack')
 
 
 class ProductProduct(models.Model):
