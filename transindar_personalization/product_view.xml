@@ -55,7 +55,6 @@
                 <field name="default_code" position="replace"/>
                 <field name="attribute_value_ids" position="replace"/>
                 <field name="ean13" position="replace"/>
-                <field name="sale_price_currency_id" position="replace"/>
                 <field name="name" position="before">
                     <field name="internal_code" readonly="True"/>
                     <field name="supplier_code" readonly="True"/>
@@ -67,9 +66,6 @@
                 </field>
                 <field name="virtual_available" position="after">
                     <field name="price" readonly="True"/>
-                </field>
-                <field name="price" position="after">
-                    <field name="sale_price_currency_id" readonly="True"/>
                 </field>
                 <field name="price" position="after">
                     <field name="lst_price" readonly="True"/>
