@@ -22,7 +22,7 @@
     'active': True,
     'name': 'Transindar Personalization',
     'category': 'Stock',
-    'version': '8.0.0.8.1',
+    'version': '8.0.0.9.1',
     'description': """
 Transindar Personalization
 ==========================
@@ -47,6 +47,7 @@ Transindar Personalization
         'sale_order_dates',
         'sale_global_discount',
         'l10n_ar_invoice',
+        'sale_quotation_products',
         # 'web_sheet_full_width'
     ],
     'data': [
