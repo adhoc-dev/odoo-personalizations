@@ -9,6 +9,7 @@
     """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar/',
+    'license': 'AGPL-3',
     'depends': [
         'sale', 'crm', 'delivery', 'account_analytic_analysis', 'purchase',
         'help_doc_crm', 'sale_commission'

@@ -29,6 +29,7 @@ Project Adhoc Personalization
     """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'depends': [
         'project', 'report_aeroo'
     ],

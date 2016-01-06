@@ -32,8 +32,9 @@ Modifications for Estudios Integrales
 * Modificaciones en permisos relativos a multicompania
 * Agregado control a document.directory a employees para que puedan borrar adjuntos
     """,
-    'author':  'Sistemas ADHOC',
-    'website': 'www.sistemasadhoc.com.ar',
+    'author':  'ADHOC SA',
+    'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [

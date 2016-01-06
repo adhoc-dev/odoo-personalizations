@@ -13,8 +13,9 @@ Logos Set Up Data & customizations
 * setea los campos a mostrar en la vista tree de partner
 * hacemos el campo user_id en invoices editable en cualquier momento
     """,
-    'author':  'Ingenieria ADHOC',
-    'website': 'www.ingadhoc.com',
+    'author':  'ADHOC SA',
+    'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [

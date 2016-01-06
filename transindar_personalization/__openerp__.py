@@ -29,6 +29,7 @@ Transindar Personalization
     """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'depends': [
         'sale_stock_availability',
         'product_brand',
