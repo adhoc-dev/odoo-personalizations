@@ -32,7 +32,8 @@ Adds new clasification for products called "product communication block" and "pr
 It also adds those fields in sale and invoice reports.
     """,
     'author':  'ADHOC SA',
-    'website': 'www.ingadhoc.com',
+    'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [

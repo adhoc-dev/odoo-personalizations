@@ -13,8 +13,9 @@ Scanterra Modifications
 * Ocultar el campo probabilidad en crm lead tree view
 
     """,
-    'author':  'Ingenieria ADHOC',
-    'website': 'www.ingadhoc.com',
+    'author':  'ADHOC SA',
+    'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'depends': [
         'project',
         'project_issue',

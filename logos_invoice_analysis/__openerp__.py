@@ -8,7 +8,8 @@
     This module provides Invoice Analysis for Logos implmentation
     """,
     'author': 'ADHOC SA',
-    'website': 'www.ingadhoc.com/',
+    'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'depends': [
         'account',
         'l10n_ar_invoice',

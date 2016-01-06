@@ -29,8 +29,9 @@
 Project Issue Kretz Modifications
 =================================
     """,
-    'author':  'Sistemas ADHOC',
-    'website': 'www.sistemasadhoc.com.ar',
+    'author':  'ADHOC SA',
+    'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [

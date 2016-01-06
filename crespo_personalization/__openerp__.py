@@ -28,6 +28,7 @@
     """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar/',
+    'license': 'AGPL-3',
     'depends': [
         'stock', 'web_hw_collector'
     ],

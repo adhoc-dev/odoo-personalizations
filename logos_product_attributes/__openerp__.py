@@ -9,8 +9,9 @@
 Logos Product Attributes
 ========================
     """,
-    'author':  'Ingenieria ADHOC',
-    'website': 'www.ingadhoc.com',
+    'author':  'ADHOC SA',
+    'website': 'www.adhoc.com.ar',
+    'license': 'AGPL-3',
     'images': [
     ],
     'depends': [
