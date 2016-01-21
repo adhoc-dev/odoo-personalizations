@@ -17,6 +17,52 @@ class product_template(models.Model):
     location_2 = fields.Char(String='Location 2')
     quantity_per_pack = fields.Char(String='Cantidad por Pack')
 
+    def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=100):
+        if not args:
+            args = []
+        if not context:
+            context = {}
+        if name:
+            recs = self.search(
+                cr, uid, [('internal_code', '=ilike', name)])
+            if recs:
+                domain = [('id', 'in', recs)]
+                ids = self.search(
+                    cr, uid, domain, limit=limit, context=context)
+            else:
+                recs = self.search(
+                    cr, uid, [('default_code', '=ilike', name)])
+                if recs:
+                    domain = [('id', 'in', recs)]
+                    ids = self.search(
+                        cr, uid, domain, limit=limit, context=context)
+                else:
+                    recs = self.search(
+                        cr, uid, ['|', '|',
+                                  ('product_brand_id.name', 'ilike', name),
+                                  ('name', 'ilike', name),
+                                  ('supplier_code', 'ilike', name)])
+                    domain = [('id', 'in', recs)]
+                    ids = self.search(
+                        cr, uid, domain, limit=limit, context=context)
+        else:
+            ids = self.search(cr, uid, args, limit=limit, context=context)
+        return self.name_get(cr, uid, ids, context)
+
+    def _search_custom_search(self, operator, value):
+        res = self.name_search(value, operator=operator)
+        return [('id', 'in', [x[0] for x in res])]
+
+    @api.multi
+    def _get_custom_search(self):
+        return False
+
+    custom_search = fields.Char(
+        compute='_get_custom_search',
+        string='Busqueda Inteligente',
+        search='_search_custom_search'
+        )
+
 
 class ProductProduct(models.Model):
     _inherit = 'product.product'

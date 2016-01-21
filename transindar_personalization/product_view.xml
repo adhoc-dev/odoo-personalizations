@@ -7,8 +7,8 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_search_view"/>
             <field name="arch" type="xml">
-                <field name="name" position="attributes">
-                    <attribute name="filter_domain">['|','|','|','|',('default_code','=',self),('name','ilike',self),('internal_code','=',self),('supplier_code','ilike',self),('product_brand_id.name','ilike',self)]</attribute>
+                <field name="name" position="before">
+                    <field name="custom_search"/>
                 </field>
                 <field name="product_brand_id" position="replace"/>
                 <field name="name" position="after">
