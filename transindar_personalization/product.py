@@ -61,7 +61,7 @@ class product_template(models.Model):
         compute='_get_custom_search',
         string='Busqueda Inteligente',
         search='_search_custom_search'
-        )
+    )
 
 
 class ProductProduct(models.Model):
