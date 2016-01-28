@@ -3,6 +3,7 @@ server-tools https://github.com/OCA/server-tools.git
 partner-contact https://github.com/OCA/partner-contact.git
 product-attribute https://github.com/OCA/product-attribute.git
 commission https://github.com/OCA/commission.git
+adhoc-product https://github.com/ingadhoc/product.git
 odoo-web https://github.com/ingadhoc/odoo-web.git
 odoo-help https://github.com/ingadhoc/odoo-help.git
 odoo-addons https://github.com/ingadhoc/odoo-addons.git
