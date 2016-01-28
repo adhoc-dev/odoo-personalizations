@@ -50,8 +50,8 @@
             <field name="inherit_id" ref="sale_quotation_products.product_product_tree_view"/>
             <field name="priority">20</field>
             <field name="arch" type="xml">
-                <field name="price" position="replace"/>
-                <field name="lst_price" position="replace"/>
+                <!-- <field name="price" position="replace"/> -->
+                <!-- <field name="lst_price" position="replace"/> -->
                 <field name="default_code" position="replace"/>
                 <field name="attribute_value_ids" position="replace"/>
                 <field name="ean13" position="replace"/>
@@ -64,12 +64,12 @@
                     <field name="seller_id" readonly="True"/>
                     <field name="public_categ_ids" widget="many2many_tags" readonly="True"/>
                 </field>
-                <field name="virtual_available" position="after">
+<!--                 <field name="virtual_available" position="after">
                     <field name="price" readonly="True"/>
-                </field>
-                <field name="price" position="after">
+                </field> -->
+<!--                 <field name="price" position="after">
                     <field name="lst_price" readonly="True"/>
-                </field>
+                </field> -->
                 <field name="state" position="attributes">
                     <attribute name="invisible">True</attribute>
                 </field>
@@ -225,9 +225,9 @@
                     <field name="default_code"/>
                     <field name="seller_id"/>
                 </field>
-                <field name="virtual_available" position="after">
+<!--                 <field name="virtual_available" position="after">
                     <field name="price"/>
-                </field>
+                </field> -->
                 <field name="categ_id" position="replace">
                     <field name="public_categ_ids"/>
                 </field>
