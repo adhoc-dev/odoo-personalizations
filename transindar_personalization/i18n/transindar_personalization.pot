@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-13 14:57+0000\n"
-"PO-Revision-Date: 2015-10-13 14:57+0000\n"
+"POT-Creation-Date: 2016-01-28 15:37+0000\n"
+"PO-Revision-Date: 2016-01-28 15:37+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,32 +16,13 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: transindar_personalization
-#: view:product.product:transindar_personalization.view_product_product_form
-#: view:product.template:transindar_personalization.view_product_form
-msgid "Accounting"
-msgstr ""
-
-#. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Brand"
 msgstr ""
 
 #. module: transindar_personalization
-#: view:product.product:transindar_personalization.view_product_product_form
 #: view:product.template:transindar_personalization.view_product_form
 msgid "Codigo de Barra"
-msgstr ""
-
-#. module: transindar_personalization
-#: view:product.product:transindar_personalization.view_product_product_form
-#: view:product.template:transindar_personalization.view_product_form
-msgid "Cost Price"
-msgstr ""
-
-#. module: transindar_personalization
-#: view:product.product:transindar_personalization.view_product_product_form
-#: view:product.template:transindar_personalization.view_product_form
-msgid "Costs Price"
 msgstr ""
 
 #. module: transindar_personalization
@@ -70,6 +51,11 @@ msgid "Discounted Unit Price"
 msgstr ""
 
 #. module: transindar_personalization
+#: field:sale.order.line,discounted_price:0
+msgid "Discounted price"
+msgstr ""
+
+#. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Effective Date Budget"
 msgstr ""
@@ -77,6 +63,11 @@ msgstr ""
 #. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Internal Code"
+msgstr ""
+
+#. module: transindar_personalization
+#: model:ir.model,name:transindar_personalization.model_account_invoice
+msgid "Invoice"
 msgstr ""
 
 #. module: transindar_personalization
@@ -90,9 +81,13 @@ msgid "Location 2"
 msgstr ""
 
 #. module: transindar_personalization
-#: view:product.product:transindar_personalization.view_product_product_form
-#: view:product.template:transindar_personalization.view_product_form
-msgid "Prices and Costs"
+#: model:ir.model,name:transindar_personalization.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: transindar_personalization
+#: model:ir.model,name:transindar_personalization.model_stock_picking
+msgid "Picking List"
 msgstr ""
 
 #. module: transindar_personalization
@@ -111,53 +106,18 @@ msgid "Public Category"
 msgstr ""
 
 #. module: transindar_personalization
-#: field:product.template,public_categ_2_ids:0
-msgid "Public Category2"
+#: view:product.template:transindar_personalization.view_product_search
+msgid "Public Category 2"
 msgstr ""
 
 #. module: transindar_personalization
-#: field:product.template,public_categ_3_ids:0
-msgid "Public Category3"
+#: view:product.template:transindar_personalization.view_product_search
+msgid "Public Category 3"
 msgstr ""
 
 #. module: transindar_personalization
-#: field:product.template,replanishment_discount_1:0
-msgid "Replanishment Discount 1"
-msgstr ""
-
-#. module: transindar_personalization
-#: field:product.template,replanishment_discount_2:0
-msgid "Replanishment Discount 2"
-msgstr ""
-
-#. module: transindar_personalization
-#: field:product.template,replanishment_discount_3:0
-msgid "Replanishment Discount 3"
-msgstr ""
-
-#. module: transindar_personalization
-#: field:product.template,replanishment_discount_4:0
-msgid "Replanishment Discount 4"
-msgstr ""
-
-#. module: transindar_personalization
-#: field:product.template,replanishment_surcharge_1:0
-msgid "Replanishment Surcharge 1"
-msgstr ""
-
-#. module: transindar_personalization
-#: field:product.template,replanishment_surcharge_2:0
-msgid "Replanishment Surcharge 2"
-msgstr ""
-
-#. module: transindar_personalization
-#: field:product.template,replanishment_surcharge_3:0
-msgid "Replanishment Surcharge 3"
-msgstr ""
-
-#. module: transindar_personalization
-#: field:product.template,replanishment_surcharge_4:0
-msgid "Replanishment Surcharge 4"
+#: field:product.template,quantity_per_pack:0
+msgid "Quantity per pack"
 msgstr ""
 
 #. module: transindar_personalization
@@ -166,15 +126,8 @@ msgid "Requested Delivery Date"
 msgstr ""
 
 #. module: transindar_personalization
-#: view:product.product:transindar_personalization.view_product_product_form
-#: view:product.template:transindar_personalization.view_product_form
-msgid "Sale Price"
-msgstr ""
-
-#. module: transindar_personalization
-#: view:product.product:transindar_personalization.view_product_product_form
-#: view:product.template:transindar_personalization.view_product_form
-msgid "Sale Price:"
+#: model:res.groups,name:transindar_personalization.group_restrict_edit
+msgid "Restrict Edit Invoice Fields"
 msgstr ""
 
 #. module: transindar_personalization
@@ -183,17 +136,52 @@ msgid "Sales Order Line"
 msgstr ""
 
 #. module: transindar_personalization
+#: view:product.public.category:transindar_personalization.view_product_public_category_search
+msgid "Search Category"
+msgstr ""
+
+#. module: transindar_personalization
+#: model:ir.model,name:transindar_personalization.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Supplier Code"
 msgstr ""
 
 #. module: transindar_personalization
+#: code:addons/sources/odoo-personalizations/transindar_personalization/stock.py:17
+#: code:addons/transindar_personalization/stock.py:17
+#, python-format
+msgid "The number of packages can not be 0"
+msgstr ""
+
+#. module: transindar_personalization
+#: view:account.invoice:transindar_personalization.invoice_form
+#: view:account.voucher:transindar_personalization.view_vendor_receipt_form
+#: view:product.product:transindar_personalization.view_product_product_tree
 #: view:product.template:transindar_personalization.view_product_tree
 msgid "True"
 msgstr ""
 
 #. module: transindar_personalization
+#: view:account.invoice:transindar_personalization.invoice_form
+msgid "Update Pricelist and Prices"
+msgstr ""
+
+#. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Validity of Budget Day"
+msgstr ""
+
+#. module: transindar_personalization
+#: view:stock.picking:transindar_personalization.stock_picking_form
+msgid "{'readonly':[('picking_type_code','=','outgoing')]}"
+msgstr ""
+
+#. module: transindar_personalization
+#: view:account.invoice:transindar_personalization.invoice_form
+msgid "{'readonly':[('type','=','out_invoice'),('document_type','!=','debit_note')]}"
 msgstr ""
 

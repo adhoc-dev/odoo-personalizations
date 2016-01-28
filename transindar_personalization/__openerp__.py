@@ -22,7 +22,7 @@
     'active': True,
     'name': 'Transindar Personalization',
     'category': 'Stock',
-    'version': '8.0.0.11.1',
+    'version': '8.0.0.12.1',
     'description': """
 Transindar Personalization
 ==========================
@@ -61,6 +61,7 @@ Transindar Personalization
         'invoice_view.xml',
         'account_voucher_view.xml',
         'res_partner_view.xml',
+        'stock_picking_view.xml',
     ],
     'demo': [],
     'test': [],
