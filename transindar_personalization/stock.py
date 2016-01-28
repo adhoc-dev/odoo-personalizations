@@ -13,5 +13,5 @@ class stock_picking(models.Model):
     @api.one
     @api.constrains('number_of_packages')
     def validate_number_of_packages(self):
-        if self.number_of_packages < 0:
-            raise Warning(_('The number of packages must be positive'))
+        if not self.number_of_packages > 0:
+            raise Warning(_('The number of packages can not be 0'))

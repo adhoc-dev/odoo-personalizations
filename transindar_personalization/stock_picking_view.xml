@@ -26,7 +26,9 @@
                 <field name="declared_value" position="attributes">
                     <attribute name="attrs">{'readonly':[('picking_type_code','=','outgoing')]}</attribute>
                 </field>
-                
+                <field name="purchase_order_number" position="attributes">
+                    <attribute name="attrs">{'readonly':[('picking_type_code','=','outgoing')]}</attribute>
+                </field>
             </field>
         </record>
         
