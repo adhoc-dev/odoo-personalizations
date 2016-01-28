@@ -62,6 +62,7 @@ Transindar Personalization
         'invoice_view.xml',
         'account_voucher_view.xml',
         'res_partner_view.xml',
+        'stock_picking_view.xml',
     ],
     'demo': [],
     'test': [],
