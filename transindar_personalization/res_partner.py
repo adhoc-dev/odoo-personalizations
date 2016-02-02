@@ -24,9 +24,6 @@ class res_partner(models.Model):
                     cr, uid, [('ref', 'ilike', name)] + args,
                     limit=limit, context=context)
                 res = self.name_get(cr, uid, recs)
-                res += super(res_partner, self).name_search(
-                    cr, uid,
-                    name=name, args=args, operator=operator, limit=limit)
         else:
             res = super(res_partner, self).name_search(
                     cr, uid,
