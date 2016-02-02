@@ -26,27 +26,64 @@ class product_template(models.Model):
             recs = self.search(
                 cr, uid, [('internal_code', '=ilike', name)])
             if recs:
-                domain = [('id', 'in', recs)]
-                ids = self.search(
-                    cr, uid, domain, limit=limit, context=context)
-            else:
-                recs = self.search(
-                    cr, uid, [('default_code', '=ilike', name)])
-                if recs:
-                    domain = [('id', 'in', recs)]
-                    ids = self.search(
-                        cr, uid, domain, limit=limit, context=context)
-                else:
-                    recs = self.search(
-                        cr, uid, ['|', '|',
-                                  ('product_brand_id.name', 'ilike', name),
-                                  ('name', 'ilike', name),
-                                  ('supplier_code', 'ilike', name)])
-                    domain = [('id', 'in', recs)]
-                    ids = self.search(
-                        cr, uid, domain, limit=limit, context=context)
-        else:
-            ids = self.search(cr, uid, args, limit=limit, context=context)
+                return self.name_get(cr, uid, recs, context)
+            recs = self.search(
+                cr, uid, [('default_code', '=ilike', name)])
+            if recs:
+                return self.name_get(cr, uid, recs, context)
+            recs = self.search(
+                cr, uid, ['|', '|', ('name', 'ilike', name),
+                          ('product_brand_id.name', 'ilike', name),
+                          ('supplier_code', 'ilike', name)])
+            return self.name_get(cr, uid, recs, context)
+        ids = self.search(cr, uid, args, limit=limit, context=context)
+        return self.name_get(cr, uid, ids, context)
+
+    def _search_custom_search(self, operator, value):
+        res = self.name_search(value, operator=operator)
+        return [('id', 'in', res)]
+
+    @api.multi
+    def _get_custom_search(self):
+        return False
+
+    custom_search = fields.Char(
+        compute='_get_custom_search',
+        string='Busqueda Inteligente',
+        search='_search_custom_search'
+    )
+
+
+class ProductProduct(models.Model):
+    _inherit = 'product.product'
+
+    supplier_code = fields.Char(
+        related='seller_ids.product_code', string="Supplier Code")
+    location_1 = fields.Char(
+        related='product_tmpl_id.location_1', String='Location 1')
+    location_2 = fields.Char(
+        related='product_tmpl_id.location_2', String='Location 2')
+
+    def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=100):
+        if not args:
+            args = []
+        if not context:
+            context = {}
+        if name:
+            recs = self.search(
+                cr, uid, [('internal_code', '=ilike', name)])
+            if recs:
+                return self.name_get(cr, uid, recs, context)
+            recs = self.search(
+                cr, uid, [('default_code', '=ilike', name)])
+            if recs:
+                return self.name_get(cr, uid, recs, context)
+            recs = self.search(
+                cr, uid, ['|', '|', ('name', 'ilike', name),
+                          ('product_brand_id.name', 'ilike', name),
+                          ('supplier_code', 'ilike', name)])
+            return self.name_get(cr, uid, recs, context)
+        ids = self.search(cr, uid, args, limit=limit, context=context)
         return self.name_get(cr, uid, ids, context)
 
     def _search_custom_search(self, operator, value):
@@ -61,18 +98,7 @@ class product_template(models.Model):
         compute='_get_custom_search',
         string='Busqueda Inteligente',
         search='_search_custom_search'
-        )
-
-
-class ProductProduct(models.Model):
-    _inherit = 'product.product'
-
-    supplier_code = fields.Char(
-        related='seller_ids.product_code', string="Supplier Code")
-    location_1 = fields.Char(
-        related='product_tmpl_id.location_1', String='Location 1')
-    location_2 = fields.Char(
-        related='product_tmpl_id.location_2', String='Location 2')
+    )
 
 
 class product_public_category(models.Model):
