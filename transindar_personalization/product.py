@@ -41,7 +41,7 @@ class product_template(models.Model):
 
     def _search_custom_search(self, operator, value):
         res = self.name_search(value, operator=operator)
-        return [('id', 'in', res)]
+        return [('id', 'in', [x[0] for x in res])]
 
     @api.multi
     def _get_custom_search(self):
