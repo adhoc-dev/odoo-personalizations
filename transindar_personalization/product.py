@@ -17,31 +17,41 @@ class product_template(models.Model):
     location_2 = fields.Char(String='Location 2')
     quantity_per_pack = fields.Char(String='Cantidad por Pack')
 
-    def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=100):
+    @api.model
+    def name_search(
+            self, name, args=None, operator='ilike', limit=100):
+        recs = self.search(self._get_search_domain(
+            name, args=args, operator=operator, limit=limit), limit=100)
+        return recs.name_get()
+
+    @api.model
+    def _get_search_domain(
+            self, name, args=None, operator='ilike', limit=100):
         if not args:
             args = []
-        if not context:
-            context = {}
         if name:
-            recs = self.search(
-                cr, uid, [('internal_code', '=ilike', name)])
-            if recs:
-                return self.name_get(cr, uid, recs, context)
-            recs = self.search(
-                cr, uid, [('default_code', '=ilike', name)])
-            if recs:
-                return self.name_get(cr, uid, recs, context)
-            recs = self.search(
-                cr, uid, ['|', '|', ('name', 'ilike', name),
-                          ('product_brand_id.name', 'ilike', name),
-                          ('supplier_code', 'ilike', name)])
-            return self.name_get(cr, uid, recs, context)
-        ids = self.search(cr, uid, args, limit=limit, context=context)
-        return self.name_get(cr, uid, ids, context)
+            # if we found exact internal_code we return it
+            if self.search(
+                    [('internal_code', '=ilike', name)], limit=limit):
+                return [('internal_code', '=ilike', name)]
 
+            # if we found exact default_code we return it
+            elif self.search(
+                    [('default_code', '=ilike', name)], limit=limit):
+                return [('default_code', '=ilike', name)]
+
+            # else we return custom search
+            else:
+                return [
+                    '|', '|', ('name', 'ilike', name),
+                    ('product_brand_id.name', 'ilike', name),
+                    ('supplier_code', 'ilike', name)]
+        return self.search(args, limit=limit)
+
+    @api.model
     def _search_custom_search(self, operator, value):
-        res = self.name_search(value, operator=operator)
-        return [('id', 'in', [x[0] for x in res])]
+        recs = self._get_search_domain(value, operator=operator)
+        return recs
 
     @api.multi
     def _get_custom_search(self):
@@ -64,31 +74,41 @@ class ProductProduct(models.Model):
     location_2 = fields.Char(
         related='product_tmpl_id.location_2', String='Location 2')
 
-    def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=100):
+    @api.model
+    def name_search(
+            self, name, args=None, operator='ilike', limit=100):
+        recs = self.search(self._get_search_domain(
+            name, args=args, operator=operator, limit=limit), limit=100)
+        return recs.name_get()
+
+    @api.model
+    def _get_search_domain(
+            self, name, args=None, operator='ilike', limit=100):
         if not args:
             args = []
-        if not context:
-            context = {}
         if name:
-            recs = self.search(
-                cr, uid, [('internal_code', '=ilike', name)])
-            if recs:
-                return self.name_get(cr, uid, recs, context)
-            recs = self.search(
-                cr, uid, [('default_code', '=ilike', name)])
-            if recs:
-                return self.name_get(cr, uid, recs, context)
-            recs = self.search(
-                cr, uid, ['|', '|', ('name', 'ilike', name),
-                          ('product_brand_id.name', 'ilike', name),
-                          ('supplier_code', 'ilike', name)])
-            return self.name_get(cr, uid, recs, context)
-        ids = self.search(cr, uid, args, limit=limit, context=context)
-        return self.name_get(cr, uid, ids, context)
+            # if we found exact internal_code we return it
+            if self.search(
+                    [('internal_code', '=ilike', name)], limit=limit):
+                return [('internal_code', '=ilike', name)]
 
+            # if we found exact default_code we return it
+            elif self.search(
+                    [('default_code', '=ilike', name)], limit=limit):
+                return [('default_code', '=ilike', name)]
+
+            # else we return custom search
+            else:
+                return [
+                    '|', '|', ('name', 'ilike', name),
+                    ('product_brand_id.name', 'ilike', name),
+                    ('supplier_code', 'ilike', name)]
+        return self.search(args, limit=limit)
+
+    @api.model
     def _search_custom_search(self, operator, value):
-        res = self.name_search(value, operator=operator)
-        return [('id', 'in', [x[0] for x in res])]
+        recs = self._get_search_domain(value, operator=operator)
+        return recs
 
     @api.multi
     def _get_custom_search(self):
