@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-28 15:41+0000\n"
-"PO-Revision-Date: 2016-01-28 12:43-0300\n"
+"POT-Creation-Date: 2016-02-11 14:35+0000\n"
+"PO-Revision-Date: 2016-02-16 12:54-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "X-Generator: Poedit 1.5.4\n"
+
+#. module: transindar_personalization
+#: model:res.groups,name:transindar_personalization.group_allow_manage_products
+msgid "Allow manage products"
+msgstr "Permitir gestionar productos"
 
 #. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
@@ -57,9 +62,19 @@ msgid "Discounted price"
 msgstr "Discounted price"
 
 #. module: transindar_personalization
+#: model:res.groups,name:transindar_personalization.group_edit_view
+msgid "Edit and view"
+msgstr "Editar costos y reglas de calculo de venta"
+
+#. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Effective Date Budget"
 msgstr "Fecha de Validez del Presupuesto"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_view_edit_form
+msgid "False"
+msgstr "False"
 
 #. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
@@ -82,6 +97,21 @@ msgid "Location 2"
 msgstr "Ubicación  2"
 
 #. module: transindar_personalization
+#: model:ir.module.category,description:transindar_personalization.module_prices_management
+msgid "Manager view in product views."
+msgstr "Manager view in product views."
+
+#. module: transindar_personalization
+#: model:res.groups,name:transindar_personalization.group_only_view
+msgid "Only view"
+msgstr "Ver costos y reglas de calculo de venta"
+
+#. module: transindar_personalization
+#: model:res.groups,name:transindar_personalization.group_only_view_sale_price
+msgid "Only view sales price"
+msgstr "Ver precio de venta"
+
+#. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_res_partner
 msgid "Partner"
 msgstr "Partner"
@@ -90,6 +120,17 @@ msgstr "Partner"
 #: model:ir.model,name:transindar_personalization.model_stock_picking
 msgid "Picking List"
 msgstr "Lista de selección"
+
+#. module: transindar_personalization
+#: model:ir.module.category,name:transindar_personalization.module_prices_management
+msgid "Prices"
+msgstr "Precios"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_only_view_form
+#: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
+msgid "Procurements"
+msgstr "Abastecimientos"
 
 #. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_product_product
@@ -129,7 +170,7 @@ msgstr "Fecha de Entrega Solicitada"
 #. module: transindar_personalization
 #: model:res.groups,name:transindar_personalization.group_restrict_edit
 msgid "Restrict Edit Invoice Fields"
-msgstr "Restringir Editar campos en la Factura y Ordenes de entrega"
+msgstr "Restringir Editar campos en la Factura"
 
 #. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_sale_order_line
@@ -152,16 +193,11 @@ msgid "Supplier Code"
 msgstr "Código Proveedor"
 
 #. module: transindar_personalization
-#: code:addons/sources/odoo-personalizations/transindar_personalization/stock.py:17
-#: code:addons/transindar_personalization/stock.py:17
-#, python-format
-msgid "The number of packages can not be 0"
-msgstr "The number of packages can not be 0"
-
-#. module: transindar_personalization
 #: view:account.invoice:transindar_personalization.invoice_form
 #: view:account.voucher:transindar_personalization.view_vendor_receipt_form
 #: view:product.product:transindar_personalization.view_product_product_tree
+#: view:product.template:transindar_personalization.view_product_only_view_form
+#: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
 #: view:product.template:transindar_personalization.view_product_tree
 msgid "True"
 msgstr "Verdadero"
@@ -175,6 +211,26 @@ msgstr "Actualizar lista de precios"
 #: view:sale.order:transindar_personalization.view_sale_order_tree
 msgid "Validity of Budget Day"
 msgstr "Días de Validez del Presupuesto"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
+msgid "{'invisible': True}"
+msgstr "{'invisible': True}"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_only_view_form
+msgid "{'invisible':False}"
+msgstr "{'invisible':False}"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
+msgid "{'invisible':True}"
+msgstr "{'invisible':True}"
+
+#. module: transindar_personalization
+#: view:product.template:transindar_personalization.view_product_only_view_form
+msgid "{'invisible':[('list_price_type', '!=', 'by_margin')]}"
+msgstr "{'invisible':[('list_price_type', '!=', 'by_margin')]}"
 
 #. module: transindar_personalization
 #: view:stock.picking:transindar_personalization.stock_picking_form
