@@ -21,7 +21,7 @@ class product_template(models.Model):
     def name_search(
             self, name, args=None, operator='ilike', limit=100):
         recs = self.search(self._get_search_domain(
-            name, args=args, operator=operator, limit=limit), limit=100)
+            name, args=args, operator=operator, limit=limit), limit=limit)
         return recs.name_get()
 
     @api.model
@@ -46,7 +46,7 @@ class product_template(models.Model):
                     '|', '|', ('name', 'ilike', name),
                     ('product_brand_id.name', 'ilike', name),
                     ('supplier_code', 'ilike', name)]
-        return self.search(args, limit=limit)
+        return args
 
     @api.model
     def _search_custom_search(self, operator, value):
@@ -78,7 +78,7 @@ class ProductProduct(models.Model):
     def name_search(
             self, name, args=None, operator='ilike', limit=100):
         recs = self.search(self._get_search_domain(
-            name, args=args, operator=operator, limit=limit), limit=100)
+            name, args=args, operator=operator, limit=limit), limit=limit)
         return recs.name_get()
 
     @api.model
@@ -103,7 +103,7 @@ class ProductProduct(models.Model):
                     '|', '|', ('name', 'ilike', name),
                     ('product_brand_id.name', 'ilike', name),
                     ('supplier_code', 'ilike', name)]
-        return self.search(args, limit=limit)
+        return args
 
     @api.model
     def _search_custom_search(self, operator, value):
