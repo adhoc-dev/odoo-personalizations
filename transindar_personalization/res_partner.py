@@ -21,13 +21,15 @@ class res_partner(models.Model):
                 res = self.name_get(cr, uid, recs)
             else:
                 recs = self.search(
-                    cr, uid, [('ref', 'ilike', name)] + args,
+                    cr, uid, [
+                        '|', ('display_name', 'ilike', name),
+                        ('ref', 'ilike', name)] + args,
                     limit=limit, context=context)
                 res = self.name_get(cr, uid, recs)
         else:
             res = super(res_partner, self).name_search(
-                    cr, uid,
-                    name=name, args=args, operator=operator, limit=limit)
+                cr, uid,
+                name=name, args=args, operator=operator, limit=limit)
         return res
 
     def _search_custom_search(self, operator, value):
@@ -42,4 +44,4 @@ class res_partner(models.Model):
         compute='_get_custom_search',
         string='Busqueda Inteligente',
         search='_search_custom_search'
-        )
+    )
