@@ -9,32 +9,33 @@ from openerp import models, api, fields
 class res_partner(models.Model):
     _inherit = 'res.partner'
 
-    def name_search(self, cr, uid, name, args=None,
-                    operator='ilike', context=None, limit=100):
-        args = args or []
-        res = []
-        if name:
-            recs = self.search(
-                cr, uid, [('internal_code', '=ilike', name)],
-                limit=limit, context=context)
-            if recs:
-                res = self.name_get(cr, uid, recs)
-            else:
-                recs = self.search(
-                    cr, uid, [
-                        '|', ('display_name', 'ilike', name),
-                        ('ref', 'ilike', name)] + args,
-                    limit=limit, context=context)
-                res = self.name_get(cr, uid, recs)
-        else:
-            res = super(res_partner, self).name_search(
-                cr, uid,
+    @api.model
+    def name_search(
+            self, name, args=None, operator='ilike', limit=100):
+        recs = self.search(self._get_search_domain(
+            name, args=args, operator=operator, limit=limit), limit=limit)
+        if not recs:
+            return super(res_partner, self).name_search(
                 name=name, args=args, operator=operator, limit=limit)
-        return res
+        return recs.name_get()
+
+    @api.model
+    def _get_search_domain(self, name, args=None, operator='ilike', limit=100):
+        if not args:
+            args = []
+        if name:
+            if self.search(
+                    [('internal_code', '=ilike', name)],
+                    limit=limit):
+                return [('internal_code', '=ilike', name)]
+            else:
+                return ['|', ('display_name', 'ilike', name),
+                        ('ref', 'ilike', name)]
+        return args
 
     def _search_custom_search(self, operator, value):
-        res = self.name_search(value, operator=operator)
-        return [('id', 'in', [x[0] for x in res])]
+        res = self._get_search_domain(value, operator=operator)
+        return res
 
     @api.multi
     def _get_custom_search(self):
