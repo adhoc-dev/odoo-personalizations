@@ -30,7 +30,57 @@
     <record model="res.groups" id="group_allow_manage_products">
         <field name="name">Allow manage products</field>
     </record>
+    <record model="ir.model.access" id="stock.access_product_product_stock_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="product.access_product_product_sale_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="purchase.access_product_product_purchase_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="hr_timesheet.access_product_product_user">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="product.access_product_template_sale_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="stock.access_product_template_stock_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="purchase.access_product_template_purchase_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="stock.access_product_template_stock_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="purchase.access_product_template_purchase_manager">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+    <record model="ir.model.access" id="hr_timesheet.access_product_template_hr_timesheet">
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
 
-    </data>
+    </data> 
 </openerp>
 

@@ -22,7 +22,7 @@
     'active': True,
     'name': 'Transindar Personalization',
     'category': 'Stock',
-    'version': '8.0.0.14.2',
+    'version': '8.0.0.15.2',
     'description': """
 Transindar Personalization
 ==========================
