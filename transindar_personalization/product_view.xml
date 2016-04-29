@@ -37,9 +37,21 @@
                 <field name="uom_po_id" position="after">
                     <field name="quantity_per_pack"/>
                 </field>
+            </field>
+        </record>
+
+        <record id="product_template_form_view" model="ir.ui.view">
+            <field name="name">product.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
                 <field name="loc_case" position="after">
                     <field name="location_1"/>
                     <field name="location_2"/>
+                    <field name="stk_tmp_ros"/>
+                    <field name="stk_tmp_sfe"/>
+                    <field name="stk_tmp_raf"/>
                 </field>
             </field>
         </record>
@@ -79,6 +91,12 @@
                 <field name="product_brand_id" position="attributes">
                     <attribute name="readonly">True</attribute>
                 </field>
+                <field name="virtual_available" position="after">
+                     <field name="stk_tmp_ros" readonly="True"/>
+                     <field name="stk_tmp_sfe" readonly="True"/>
+                     <field name="stk_tmp_raf" readonly="True"/>
+                </field>
+
             </field>
         </record>
 

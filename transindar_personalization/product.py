@@ -16,6 +16,9 @@ class product_template(models.Model):
     location_1 = fields.Char(String='Location 1')
     location_2 = fields.Char(String='Location 2')
     quantity_per_pack = fields.Char(String='Cantidad por Pack')
+    stk_tmp_ros = fields.Char('S. Rosario')
+    stk_tmp_sfe = fields.Char('S. Santa Fe')
+    stk_tmp_raf = fields.Char('S. Rafaela')
 
     @api.model
     def name_search(
