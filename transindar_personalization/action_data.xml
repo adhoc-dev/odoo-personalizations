@@ -11,6 +11,16 @@
     <record id="base.action_partner_supplier_form" model="ir.actions.act_window">
         <field name="view_mode">tree,form,kanban</field>
     </record>
+    <record id="product.product_template_action" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,kanban</field>
+    </record>   
+
+    <record id="base.action_partner_form_view1" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+    </record>
+    <record id="base.action_partner_tree_view1" model="ir.actions.act_window.view">
+        <field name="sequence" eval="0"/>
+    </record>
 
 </data>
 </openerp>
