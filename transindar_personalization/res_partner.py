@@ -25,12 +25,12 @@ class res_partner(models.Model):
             args = []
         if name:
             if self.search(
-                    [('internal_code', '=ilike', name)],
+                    [('internal_code', '=ilike', name)] + args,
                     limit=limit):
-                return [('internal_code', '=ilike', name)]
+                return [('internal_code', '=ilike', name)] + args
             else:
                 return ['|', ('display_name', 'ilike', name),
-                        ('ref', 'ilike', name)]
+                        ('ref', 'ilike', name)] + args
         return args
 
     def _search_custom_search(self, operator, value):
