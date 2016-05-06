@@ -8,3 +8,4 @@ odoo-web https://github.com/ingadhoc/odoo-web.git
 odoo-help https://github.com/ingadhoc/odoo-help.git
 odoo-addons https://github.com/ingadhoc/odoo-addons.git
 odoo-argentina https://github.com/ingadhoc/odoo-argentina.git
+adhoc-account-invoicing https://github.com/ingadhoc/account-invoicing.git

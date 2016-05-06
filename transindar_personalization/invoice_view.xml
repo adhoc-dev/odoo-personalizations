@@ -32,9 +32,6 @@
                 <field name="account_id" position="attributes">
                     <attribute name="attrs">{'readonly':[('type','=','out_invoice'),('document_type','!=','debit_note')]}</attribute>
                 </field>
-                <field name="invoice_line" position="attributes">
-                    <attribute name="attrs">{'readonly':[('type','=','out_invoice'),('document_type','!=','debit_note')]}</attribute>
-                </field>
                 <field name="tax_line" position="attributes">
                     <attribute name="attrs">{'readonly':[('type','=','out_invoice'),('document_type','!=','debit_note')]}</attribute>
                 </field>
