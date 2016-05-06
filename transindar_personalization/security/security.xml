@@ -25,7 +25,7 @@
     </record>
 
     <record model="res.groups" id="group_restrict_edit">
-        <field name="name">Restrict Edit Invoice, Picking Fields</field>
+        <field name="name">Restrict Edit Invoice And Picking Fields</field>
     </record>
     <record model="res.groups" id="group_allow_manage_products">
         <field name="name">Allow manage products</field>
