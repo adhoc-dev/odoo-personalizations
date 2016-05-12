@@ -36,24 +36,26 @@ class product_template(models.Model):
             # if we found exact internal_code we return it
             if self.search(
                     [('internal_code', '=ilike', name)], limit=limit):
-                return [('internal_code', '=ilike', name)]
+                return [('internal_code', '=ilike', name)] + args
 
             # if we found exact default_code we return it
             elif self.search(
                     [('default_code', '=ilike', name)], limit=limit):
-                return [('default_code', '=ilike', name)]
+                return [('default_code', '=ilike', name)] + args
 
             # else we return custom search
             else:
                 return [
                     '|', '|', ('name', 'ilike', name),
                     ('product_brand_id.name', 'ilike', name),
-                    ('supplier_code', 'ilike', name)]
+                    ('supplier_code', 'ilike', name)] + args
         return args
 
     @api.model
     def _search_custom_search(self, operator, value):
-        recs = self._get_search_domain(value, operator=operator)
+        recs = ['|', '|', ('name', 'ilike', value),
+                ('product_brand_id.name', 'ilike', value),
+                ('supplier_code', 'ilike', value)]
         return recs
 
     @api.multi
@@ -93,24 +95,27 @@ class ProductProduct(models.Model):
             # if we found exact internal_code we return it
             if self.search(
                     [('internal_code', '=ilike', name)], limit=limit):
-                return [('internal_code', '=ilike', name)]
+                return [('internal_code', '=ilike', name)] + args
 
             # if we found exact default_code we return it
             elif self.search(
                     [('default_code', '=ilike', name)], limit=limit):
-                return [('default_code', '=ilike', name)]
+                return [('default_code', '=ilike', name)] + args
 
             # else we return custom search
             else:
                 return [
                     '|', '|', ('name', 'ilike', name),
                     ('product_brand_id.name', 'ilike', name),
-                    ('supplier_code', 'ilike', name)]
+                    ('supplier_code', 'ilike', name)] + args
+
         return args
 
     @api.model
     def _search_custom_search(self, operator, value):
-        recs = self._get_search_domain(value, operator=operator)
+        recs = ['|', '|', ('name', 'ilike', value),
+                ('product_brand_id.name', 'ilike', value),
+                ('supplier_code', 'ilike', value)]
         return recs
 
     @api.multi
