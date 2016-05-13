@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-11 14:35+0000\n"
-"PO-Revision-Date: 2016-02-16 12:54-0300\n"
+"POT-Creation-Date: 2016-05-12 16:23+0000\n"
+"PO-Revision-Date: 2016-05-12 13:24-0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "X-Generator: Poedit 1.5.4\n"
+
+#. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_only_view_form
+#: view:product.product:transindar_personalization.view_product_product_view_sale_price_form
+#: view:product.template:transindar_personalization.view_product_only_view_form
+#: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
+msgid "Accounting Cost"
+msgstr "Accounting Cost"
 
 #. module: transindar_personalization
 #: model:res.groups,name:transindar_personalization.group_allow_manage_products
@@ -63,8 +71,8 @@ msgstr "Discounted price"
 
 #. module: transindar_personalization
 #: model:res.groups,name:transindar_personalization.group_edit_view
-msgid "Edit and view"
-msgstr "Editar costos y reglas de calculo de venta"
+msgid "Edit and View"
+msgstr "Edit and View"
 
 #. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
@@ -72,6 +80,7 @@ msgid "Effective Date Budget"
 msgstr "Fecha de Validez del Presupuesto"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_view_edit_form
 #: view:product.template:transindar_personalization.view_product_view_edit_form
 msgid "False"
 msgstr "False"
@@ -97,14 +106,14 @@ msgid "Location 2"
 msgstr "Ubicación  2"
 
 #. module: transindar_personalization
-#: model:ir.module.category,description:transindar_personalization.module_prices_management
-msgid "Manager view in product views."
-msgstr "Manager view in product views."
+#: field:product.template,next_deactivate:0
+msgid "Next Deactivate"
+msgstr "Próxima fecha de desactivación"
 
 #. module: transindar_personalization
 #: model:res.groups,name:transindar_personalization.group_only_view
-msgid "Only view"
-msgstr "Ver costos y reglas de calculo de venta"
+msgid "Only View"
+msgstr "Only View"
 
 #. module: transindar_personalization
 #: model:res.groups,name:transindar_personalization.group_only_view_sale_price
@@ -114,7 +123,7 @@ msgstr "Ver precio de venta"
 #. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_res_partner
 msgid "Partner"
-msgstr "Partner"
+msgstr "Empresa"
 
 #. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_stock_picking
@@ -127,12 +136,6 @@ msgid "Prices"
 msgstr "Precios"
 
 #. module: transindar_personalization
-#: view:product.template:transindar_personalization.view_product_only_view_form
-#: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
-msgid "Procurements"
-msgstr "Abastecimientos"
-
-#. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_product_product
 msgid "Product"
 msgstr "Producto"
@@ -140,7 +143,7 @@ msgstr "Producto"
 #. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_product_template
 msgid "Product Template"
-msgstr "Plantilla de Producto"
+msgstr "Plantilla de producto"
 
 #. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_product_public_category
@@ -173,19 +176,29 @@ msgid "Restrict Edit Invoice Fields"
 msgstr "Restringir Editar campos en la Factura"
 
 #. module: transindar_personalization
+#: field:product.template,stk_tmp_raf:0
+msgid "S. Rafaela"
+msgstr "S. Rafaela"
+
+#. module: transindar_personalization
+#: field:product.template,stk_tmp_ros:0
+msgid "S. Rosario"
+msgstr "S. Rosario"
+
+#. module: transindar_personalization
+#: field:product.template,stk_tmp_sfe:0
+msgid "S. Santa Fe"
+msgstr "S. Santa Fe"
+
+#. module: transindar_personalization
 #: model:ir.model,name:transindar_personalization.model_sale_order_line
 msgid "Sales Order Line"
-msgstr "Líneas de la nota de pedido"
+msgstr "Línea de Pedido de Ventas"
 
 #. module: transindar_personalization
 #: view:product.public.category:transindar_personalization.view_product_public_category_search
 msgid "Search Category"
 msgstr "Search Category"
-
-#. module: transindar_personalization
-#: model:ir.model,name:transindar_personalization.model_stock_move
-msgid "Stock Move"
-msgstr "Movimiento stock"
 
 #. module: transindar_personalization
 #: view:sale.order:transindar_personalization.view_sale_order_tree
@@ -196,7 +209,6 @@ msgstr "Código Proveedor"
 #: view:account.invoice:transindar_personalization.invoice_form
 #: view:account.voucher:transindar_personalization.view_vendor_receipt_form
 #: view:product.product:transindar_personalization.view_product_product_tree
-#: view:product.template:transindar_personalization.view_product_only_view_form
 #: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
 #: view:product.template:transindar_personalization.view_product_tree
 msgid "True"
@@ -213,16 +225,19 @@ msgid "Validity of Budget Day"
 msgstr "Días de Validez del Presupuesto"
 
 #. module: transindar_personalization
-#: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
-msgid "{'invisible': True}"
-msgstr "{'invisible': True}"
+#: view:product.product:transindar_personalization.view_product_product_only_view_form
+#: view:product.template:transindar_personalization.view_product_only_view_form
+msgid "{'invisible':False , 'readonly':True}"
+msgstr "{'invisible':False , 'readonly':True}"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_only_view_form
 #: view:product.template:transindar_personalization.view_product_only_view_form
 msgid "{'invisible':False}"
 msgstr "{'invisible':False}"
 
 #. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_view_sale_price_form
 #: view:product.template:transindar_personalization.view_product_only_view_sale_price_form
 msgid "{'invisible':True}"
 msgstr "{'invisible':True}"
@@ -231,6 +246,12 @@ msgstr "{'invisible':True}"
 #: view:product.template:transindar_personalization.view_product_only_view_form
 msgid "{'invisible':[('list_price_type', '!=', 'by_margin')]}"
 msgstr "{'invisible':[('list_price_type', '!=', 'by_margin')]}"
+
+#. module: transindar_personalization
+#: view:product.product:transindar_personalization.view_product_product_only_view_form
+#: view:product.template:transindar_personalization.view_product_only_view_form
+msgid "{'readonly':True}"
+msgstr "{'readonly':True}"
 
 #. module: transindar_personalization
 #: view:stock.picking:transindar_personalization.stock_picking_form

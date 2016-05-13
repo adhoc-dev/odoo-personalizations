@@ -53,6 +53,9 @@
                     <field name="stk_tmp_sfe"/>
                     <field name="stk_tmp_raf"/>
                 </field>
+                <field name="active" position="before">
+                    <field name="next_deactivate"/>
+                </field>    
             </field>
         </record>
 
