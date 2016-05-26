@@ -36,6 +36,14 @@
                     </group>
                 </xpath>
 
+                <xpath expr="//field[@name='order_line']//tree//field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='order_line']//tree//field[@name='name']" position="before">
+                    <field name="additional_description"/>
+                </xpath>
+
                 <xpath expr="//field[@name='order_line']//tree//field[@name='name']" position="after">
                     <field name="product_brand_id" string="Brand"/>
                     <field name="supplier_code" string="Supplier Code"/>
