@@ -39,7 +39,7 @@ Transindar Personalization
         'account_invoice_prices_update',
         'product_template_tree_prices',
         # 'product_price_currency',
-        # 'partner_internal_code',
+        'partner_internal_code',
         # 'product_sale_price_by_margin',
         'sale_three_discounts',
         'sale_order_validity',
