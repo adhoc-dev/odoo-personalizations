@@ -33,33 +33,6 @@ class res_partner(models.Model):
                         ('ref', 'ilike', name), ('email', 'ilike', name)] + args
         return args
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
     def _search_custom_search(self, operator, value):
         res = self._get_search_domain(value, operator=operator)
         return res
