@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Salve Regina Picking Report',
-    'version': '8.0.0.0.0',
+    'version': '8.0.0.0.1',
     'author': 'ADHOC SA',
     'license': 'AGPL-3',
     'category': 'base.module_category_knowledge_management',
@@ -31,6 +31,7 @@ Salve Regina Picking Report
 """,
     'test': [],
     'depends': [
+        'l10n_ar_aeroo_base',
         'sale',
         'report_aeroo',
     ],
