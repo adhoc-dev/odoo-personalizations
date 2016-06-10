@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Salve Regina Picking Report',
-    'version': '8.0.0.0.1',
+    'version': '8.0.0.0.0',
     'author': 'ADHOC SA',
     'license': 'AGPL-3',
     'category': 'base.module_category_knowledge_management',
