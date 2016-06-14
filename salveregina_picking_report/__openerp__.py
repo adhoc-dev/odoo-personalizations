@@ -31,6 +31,7 @@ Salve Regina Picking Report
 """,
     'test': [],
     'depends': [
+        'l10n_ar_aeroo_base',
         'sale',
         'report_aeroo',
     ],
