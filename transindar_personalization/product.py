@@ -20,6 +20,7 @@ class product_template(models.Model):
     stk_tmp_sfe = fields.Char('S. Santa Fe')
     stk_tmp_raf = fields.Char('S. Rafaela')
     next_deactivate = fields.Date('Next Deactivate')
+
     @api.model
     def name_search(
             self, name, args=None, operator='ilike', limit=100):
