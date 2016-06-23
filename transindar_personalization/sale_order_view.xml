@@ -29,9 +29,13 @@
                             <field name="validity_date" string="Effective Date Budget"/>
                         </group>
                         <group>
-                            <field name="requested_date" on_change="onchange_requested_date(requested_date, commitment_date)" string="Requested Delivery Date"/>
                             <field name="commitment_date" />
                             <field name="effective_date"/>
+                            <field name="sale_preparetion_time"/>
+                            <field name="requested_date" on_change="onchange_requested_date(requested_date, commitment_date)" string="Requested Delivery Date"/>
+                            <div class="oe_title">
+                                <button name="update_requested_date" string="⇒ Update for preparetion time" type="object" class="oe_link"/>
+                            </div>
                         </group>
                     </group>
                 </xpath>
@@ -64,6 +68,18 @@
                     <field name="product_uom"/>
                     <field name="virtual_available" groups="sale_stock_availability.see_stock_value" attrs="{'invisible':[('state','!=','draft')]}"/>
                 </xpath>
+            </field>
+        </record>
+
+
+        <record id="view_quotation_tree" model="ir.ui.view">
+            <field name="name">sale.order.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="create_uid"/>
+                </field>
             </field>
         </record>
     </data>
