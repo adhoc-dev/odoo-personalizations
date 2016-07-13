@@ -16,5 +16,17 @@
             </field>
         </record>
 
+        <record id="view_voucher_tree" model="ir.ui.view">
+            <field name="name">account.voucher.tree.inherit</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_voucher_tree"/>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="create_uid"/>
+                </field>
+            </field>
+        </record>
+
     </data>
 </openerp>
