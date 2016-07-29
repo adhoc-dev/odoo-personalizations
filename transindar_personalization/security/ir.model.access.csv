@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 product_product_manage,product.product..manage,product.model_product_product,group_allow_manage_products,1,1,1,1
-product_template_manage,product.template..manage,product.model_product_template,group_allow_manage_products,1,1,1,1
+product_template_manage,product.template.manage,product.model_product_template,group_allow_manage_products,1,1,1,1
+portal_account_distributor.access_product_product,product.product.portal.distributor,product.model_product_product,base.group_portal_distributor,1,1,0,0
+product.access_product_product_employee,product.product employee,product.model_product_product,base.group_user,1,1,0,0
+access_sale_exception_distributor,access_sale_exception_distributor,"sale.exception,model_sale_exception",base.group_portal_distributor,1,0,0,0
