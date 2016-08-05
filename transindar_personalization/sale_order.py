@@ -17,8 +17,8 @@ class sale_order(models.Model):
 
     @api.one
     def _get_preparation_time(self):
-        if self.user_id.company_id.preparation_time:
-            preparation_time = self.user_id.company_id.preparation_time
+        if self.company_id.preparation_time:
+            preparation_time = self.company_id.preparation_time
             self.sale_preparetion_time = len(
                 self.order_line) * preparation_time
 
